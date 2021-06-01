@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block script %}
+    {% comment %} Twitter {% endcomment %}
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    {% comment %} Facebook {% endcomment %}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v10.0" nonce="4qo22oLU"></script>
+{% endblock script %}
+
+{% block title %}Equipo | RPA{% endblock title %}
+
+{% block meta %}
+    <meta property="og:url"           content="http://www.rpa.pe{% url 'equipo:equipo' %}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Equipo" />
+    <meta property="og:description"   content="El Estudio Pariona Abogados cuenta con un equipo de profesionales altamente  especializados en las diversas materias del Derecho, con formación en el Perú y en el extranjero." />
+{% endblock meta %}
+
+{% if request.path == '/equipo/' %}
+    {% block equipomenu %}active active--color{% endblock equipomenu %}
+    {% block fondo %}
+        style="background-image: url('..{% static 'img/fondos/equipo.jpg' %}');"
+    {% endblock fondo %}
+    {% block main %}espaciado{% endblock main %}
+{% endif %}
+
+{% block header %}
+    <div class="row position-relative titulo-portada portada">
+        <h1 class="text-white titulo-portada__title">Equipo</h1>
+        <div class="text-white titulo-portada__text">
+            El Estudio Pariona Abogados cuenta con un equipo de profesionales altamente  especializados en las diversas materias del Derecho, con formación en el Perú y en el extranjero.
+        </div>
+    </div> 
+{% endblock header %}
+
+ 
+{% block content %}
+    <div class="row">
+    {% for equipo in equipos %}
+        <div class="col-12 col-lg-4 mb-3 card-equipo">
+            <div class="position-relative">
+                <img class="img-fluid rounded" src="{{ equipo.photo.url }}" alt="{{ equipo.name }}">
+                <div class="position-absolute bottom-0 start-50 translate-middle-x card-equipo__body">
+                    <div class="position-relative card-equipo__container">
+                        <div class="d-flex flex-column h-100 card-equipo__description">
+                            <span class="mt-auto fw-bold card-equipo__data">{{ equipo.grade }}</span>
+                            <h1 class="fw-bold card-equipo__name">{{ equipo.name }}</h1>
+                            <a class="card-equipo__data card-equipo__data--email" href="mailto:{{ equipo.email }}">{{ equipo.email }}</a>
+                        </div>
+                        <a class="position-absolute translate-middle card-equipo__link" href="{% url 'equipo:detalle' equipo.slug %}"><i class="fas fa-plus card-equipo__icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}

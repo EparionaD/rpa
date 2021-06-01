@@ -12,7 +12,7 @@
 {% endblock meta %}
 
 {% if request.path == '/catedra/'|add:detalle.slug|add:"/" %}
-    {% block url %}active active--color{% endblock url %}
+    {% block catedramenu %}active active--color{% endblock catedramenu %}
     {% block fondo %}
         style="background-image: url('{{ detalle.photo.url }}');"
     {% endblock fondo %}

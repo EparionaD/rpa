@@ -14,3 +14,8 @@ DATABASES = {
         'NAME': BASE_DIR.parent / 'db.sqlite3',
     }
 }
+
+if DEBUG:
+    STATICFILES_DIRS = [BASE_DIR, 'static']
+else:
+    STATIC_ROOT = BASE_DIR, 'static'

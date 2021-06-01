@@ -38,25 +38,25 @@
                         <div class="collapse navbar-collapse" id="menu-contenido-rpa">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item menu__list">
-                                    <a class="nav-link menu__item menu__item--color {% if  request.path == '/firma/' %}active active--color{% endif %}" aria-current="page" href="{% url 'index:firma' %}">La firma</a>
+                                    <a class="nav-link menu__item menu__item--color {% block firmamenu %}{% endblock firmamenu %}" aria-current="page" href="{% url 'index:firma' %}">La firma</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link menu__item menu__item--color {% if  request.path == '/especialidades/' %}active active--color{% endif %}" href="{% url 'index:especialidades' %}">Especialidades</a>
+                                    <a class="nav-link menu__item menu__item--color {% block especialidadesmenu %}{% endblock especialidadesmenu %}" href="{% url 'index:especialidades' %}">Especialidades</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link menu__item menu__item--color" href="{% url 'index:firma' %}">Equipo</a>
+                                    <a class="nav-link menu__item menu__item--color {% block equipomenu %}{% endblock equipomenu %}" href="{% url 'equipo:equipo' %}">Equipo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link menu__item menu__item--color" href="{% url 'index:firma' %}">Publicaciones</a>
+                                    <a class="nav-link menu__item menu__item--color {% block publicacionesmenu %}{% endblock publicacionesmenu %}" href="{% url 'index:firma' %}">Publicaciones</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link menu__item menu__item--color" href="{% url 'index:firma' %}">Actualidad</a>
+                                    <a class="nav-link menu__item menu__item--color {% block actualidadmenu %}{% endblock actualidadmenu %}" href="{% url 'index:firma' %}">Actualidad</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link menu__item menu__item--color {% block url %}{% endblock url %}" href="{% url 'catedra:catedra' %}">Cátedra</a>
+                                    <a class="nav-link menu__item menu__item--color {% block catedramenu %}{% endblock catedramenu %}" href="{% url 'catedra:catedra' %}">Cátedra</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link menu__item menu__item--color {% if  request.path == '/contacto/' %}active active--color{% endif %}" href="{% url 'index:contacto' %}">Contacto</a>
+                                    <a class="nav-link menu__item menu__item--color {% block contactomenu %}{% endblock contactomenu %}" href="{% url 'index:contacto' %}">Contacto</a>
                                 </li>
                             </ul>
                         </div>
@@ -75,9 +75,9 @@
         </div>
         {% block header %}{% endblock header %}
         <div class="col-12 col-lg-2 social social--movil d-inline-block d-lg-none">
-            <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-facebook-square"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/pariona.abogados"><i class="fab fa-facebook-square"></i></a>
             <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-twitter-square"></i></a>
-            <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-facebook-messenger"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="https://m.me/pariona.abogados"><i class="fab fa-facebook-messenger"></i></a>
             <a class="social__link social__link--size" target="_blank" href="https://api.whatsapp.com/send?phone=51987407711"><i class="fab fa-whatsapp"></i></a>
             <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-linkedin"></i></a>
         </div>

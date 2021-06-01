@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils.text import slugify
-from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
 class Equipo(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField('Nombres', max_length=255, blank=False, null=False)
     slug = models.SlugField('Slug', max_length=255, unique=True)
+    grade = models.CharField('Grado académico', max_length=255, blank=True, null=True)
     bio = RichTextUploadingField('Biografía', blank=False, null=False)
     photo = models.ImageField('Fotografía', upload_to='equipo/')
     email = models.EmailField('Correo electrónico', max_length=255, blank=True, null=True)
@@ -20,10 +20,10 @@ class Equipo(models.Model):
     class Meta:
         verbose_name = 'Equipo'
         verbose_name_plural = 'Equipos'
-        ordering = ['-date_create']
+        ordering = ['date_create']
 
     def __str__(self):
-        return self.title
+        return self.name
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block script %}
+    {% comment %} Twitter {% endcomment %}
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    {% comment %} Facebook {% endcomment %}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v10.0" nonce="4qo22oLU"></script>
+{% endblock script %}
+
+{% block title %}{{ detalle.name }} | RPA{% endblock title %}
+
+{% block meta %}
+    <meta property="og:url"           content="http://www.rpa.pe{% url 'equipo:detalle' detalle.slug %}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ detalle.name }}" />
+    <meta property="og:description"   content="{{ detalle.bio|safe }}" />
+    <meta property="og:image"         content="{{ detalle.photo.url }}" />
+{% endblock meta %}
+
+{% if request.path == '/equipo/'|add:detalle.slug|add:"/" %}
+    {% block equipomenu %}active active--color{% endblock equipomenu %}
+    {% block main %}espaciado{% endblock main %}
+
+    {% block fondo %}
+        style="background-image: url('{% static 'img/fondos/equipo.jpg' %}');"
+    {% endblock fondo %}
+{% endif %}
+
+{% block header %}
+    <div class="row position-relative titulo-portada portada">
+        <h1 class="text-white titulo-portada__title">Equipo</h1>
+        <div class="text-white titulo-portada__text">
+            El Estudio Pariona Abogados cuenta con un equipo de profesionales altamente  especializados en las diversas materias del Derecho, con formación en el Perú y en el extranjero.
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12 col-lg-4 mb-3 mb-lg-0 card-equipo">
+            <div class="position-relative card-equipo__stick">
+                <img class="img-fluid rounded" src="{{ detalle.photo.url }}" alt="{{ detalle.name }}">
+                <div class="position-absolute bottom-0 start-50 translate-middle-x card-equipo__body">
+                    <div class="position-relative card-equipo__container">
+                        <div class="d-flex flex-column h-100 card-equipo__description card-equipo__description--detalle">
+                            <span class="mt-auto fw-bold card-equipo__data">{{ detalle.grade }}</span>
+                            <h1 class="fw-bold card-equipo__name">{{ detalle.name }}</h1>
+                            <a class="card-equipo__data card-equipo__data--email" href="maailto:{{ detalle.email }}">{{ detalle.email }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="rounded mb-3 p-3 p-lg-4 card-equipo__bio">
+                <h1 class="mb-3 fw-bold card-equipo__title">Bio</h1>
+                <div>{{ detalle.bio|safe }}</div>
+                <a href="#" class="btn btn-primary mt-3 mt-xxl-5 button-plus__link"><i class="far fa-file me-2"></i> Ver CV</a>
+            </div>
+            <div class="rounded p-3 p-lg-4 card-equipo__contact">
+                <h1 class="fw-bold card-equipo__title">Contacto</h1>
+                <div class="mt-4">
+                    <div class="share">
+                    {% if detalle.facebook %}
+                        <a class="share__link share__link--equipo" target="_blank" href="https://www.facebook.com/{{ detalle.facebook }}"><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
+                    {% endif %}
+                    {% if detalle.twitter %}
+                        <a class="share__link share__link--equipo" target="_blank" href="https://twitter.com/{{ detalle.twitter }}"><i class="fab fa-twitter-square share__icon share__icon--twitter"></i></a>
+                    {% endif %}
+                    {% if detalle.linkedin %}
+                        <a class="share__link share__link--equipo" target="_blank" href="https://www.linkedin.com/in/{{ detalle.linkedin }}"><i class="fab fa-linkedin share__icon share__icon--linkedin"></i></a>
+                    {% endif %}
+                    {% if detalle.whatsapp %}
+                        <a class="share__link share__link--equipo" target="_blank" href="https://api.whatsapp.com/send?phone=51{{ detalle.whatsapp }}"><i class="fab fa-whatsapp share__icon share__icon--whatsapp"></i></a>
+                    {% endif %}
+                    {% if detalle.email %}
+                        <a class="share__link share__link--equipo" target="_blank" href="mailto:{{ detalle.email }}"><i class="fas fa-envelope share__icon share__icon--link"></i></a>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
