@@ -44,6 +44,7 @@ LOCAL_APPS = [
 THIRD_APPS = [
     'ckeditor',
     'ckeditor_uploader',
+    'import_export',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
