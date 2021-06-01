@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}La Firma | RPA{% endblock title %}
+
+{% if request.path == '/firma/' %}
+    {% block fondo %}
+        style="background-image: url('..{% static 'img/fondos/firma.jpg' %}');"
+    {% endblock fondo %}
+    {% block main %}firma{% endblock main %}
+{% endif %}
+
+ {% block header %}
+    <div class="row position-relative portada">
+        <h1 class="text-white titulo-portada__title">La Firma</h1>
+        <div class="text-white titulo-portada__text">
+            El Estudio Pariona Abogados es una firma de abogados especializada en Derecho Penal que brinda servicios legales de excelencia. 
+            Uno de sus principales ámbitos de acción es el Derecho Penal Económico y de la Empresa, así como el Corporate Defense y Compliance. 
+            Gracias a nuestro equipo de expertos, satisfacemos las necesidades de nuestros clientes con eficacia.
+        </div>
+    </div>
+ {% endblock header %}
+
+ {% block content %}
+    <section class="py-5 fundador">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-lg-3 fw-bold text-lg-center">Fundador</h1>
+                <p class="mb-lg-4 fundador__description">El Estudio Pariona Abogados fue fundado por el Prof. Dr. iur. Raúl Pariona Arana con el objetivo de crear y liderar a un equipo de abogados comprometidos con la defensa de los derechos fundamentales de los ciudadanos.</p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <img class="img-fluid rounded" src="{% static 'img/equipo/raul-pariona.jpg' %}" alt="">
+            </div>
+            <div class="col-12 col-lg-8 ps-lg-4 d-lg-flex flex-column">
+                <h1 class="mt-2 mt-lg-0 mb-0 fw-bold fundador__name">Raúl Pariona Arana</h1>
+                <h5 class="mb-3">Socio fundador</h5>
+                <div class="mb-3 mb-lg-auto fundador__history">
+                    Es abogado defensor y profesor universitario. 
+                    Cursó estudios de Derecho en la Universidad Nacional Mayor de San Marcos (UNMSM), casa de estudios donde se graduó como abogado en el año 2002. Desde entonces ejerce la abogacía. 
+                    Realizó estudios de post grado en la Universidad de Múnich en Alemania entre los años 2004 y 2009, donde obtuvo primero el grado de Magister Legum LLM, y luego el grado de Doctor en Derecho en el año 2009. 
+                    A su regreso al Perú fue Abogado Asociado Senior del Estudio Benites Forno y Ugaz. 
+                    Desde el año 2015 dirige el Estudio Pariona Abogados.
+                </div>
+                <a class="btn btn-primary btn-rpa" href="">Ver perfil</a>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 valores">
+        <div class="row">
+            <div class="col-12 col-lg-4 mb-3 mb-lg-0">
+                <div class="p-4 p-lg-5 rounded valores__container d-flex flex-column">
+                    <i class="fas fa-hands align-self-center text-white mb-2 valores__icon"></i>
+                    <h5 class="align-self-center text-white text-center fw-bold mb-4 valores__title">Valores</h5>
+                    <p class="mb-0 text-center text-white valores__description">Compromiso y dedicación exclusiva a nuestros clientes. Honestidad, lealtad, responsabilidad, eficiencia y eficacia son las pautas que orientan la actuación de nuestro Estudio y de cada uno de sus miembros.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 mb-3 mb-lg-0">
+                <div class="p-4 p-lg-5 rounded valores__container d-flex flex-column">
+                    <i class="far fa-handshake align-self-center text-white mb-2 valores__icon"></i>
+                    <h5 class="align-self-center text-white text-center fw-bold mb-4 valores__title">Responsabilidad social</h5>
+                    <p class="mb-0 text-center text-white valores__description">Nuestro estudio tiene un claro compromiso con la responsabilidad social que nos compete como abogados. Asumimos casos pro bono de personas, instituciones o comunidades que no cuentan con recursos económicos y cuyos casos sean de justicia.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="p-4 p-lg-5 rounded valores__container d-flex flex-column">
+                    <i class="fas fa-globe align-self-center text-white mb-2 valores__icon"></i>
+                    <h5 class="align-self-center text-white text-center fw-bold mb-4 valores__title">Red nacional e internacional</h5>
+                    <p class="mb-0 text-center text-white valores__description">Nuestro Estudio tiene una red de partners a nivel nacional e internacional que posibilitan resolver, con eficiencia y eficacia, los problemas legales que involucran a distintas jurisdicciones, posibilitando un servicio de excelencia a nuestros clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ {% endblock content %}

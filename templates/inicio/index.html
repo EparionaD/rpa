@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Inicio | RPA{% endblock title %}
+
+
+{% if request.path == '/' %}
+    {% block fondo %}
+        style="background-image: url('..{% static 'img/fondos/inicio.jpg' %}');"
+    {% endblock fondo %}
+    {% block header %}
+        <div class="row headerrpa__containertext">
+            <h1 class="fw-bold headerrpa__text">Especialistas en <span class="fw-bold headerrpa__text--color d-none d-md-inline-block">Derecho Penal</span></h1>
+            <h1 class="fw-bold headerrpa__text headerrpa__text--color d-inline-block d-md-none">Derecho Penal</h1>
+            <p class="fw-bold headerrpa__text headerrpa__text--size mt-4 mb-0 d-none">El Estudio Pariona Abogados es una firma que brinda servicios legales de excelencia. </p>
+            <p class="fw-bold headerrpa__text headerrpa__text--size d-none">Gracias a nuestro equipo de expertos, satisfacemos las necesidades de nuestros clientes con eficacia.</p>
+        </div>
+    {% endblock header %}
+    
+    {% block header-detalle %}
+        <div class="row shadow banner">
+            <div class="banner__container">
+                <i class="fas fa-balance-scale banner__icon"></i><p class="banner__text">Asesoría y defensa legal de excelencia</p>
+            </div>
+            <div class="banner__container">
+                <i class="fas fa-city banner__icon"></i><p class="banner__text">Somos una firma especializada en Derecho Penal Empresarial y Compliance</p>
+            </div>
+            <div class="banner__container">
+                <i class="fas fa-city banner__icon"></i><p class="banner__text">Somos especialistas en la defensa de funcionarios públicos</p>
+            </div>
+        </div>
+    {% endblock header-detalle %}
+        
+    {% block main %}inicio{% endblock main %}
+{% endif %}
+
+
+{% block content %}
+    <section class="row firma-inicio">
+        <div class="col-12 col-lg-5">
+            <img class="img-fluid firma-inicio__img shadow" src="./apps/img/index/index-firma.jpg" alt="Firma">
+        </div>
+        <div class="col-12 col-lg-7 firma-inicio__containertext">
+            <h1 class="fw-bold firma-inicio__title">La Firma</h1>
+            <p class="firma-inicio__text">El Estudio Pariona Abogados es una firma de abogados especializada en Derecho Penal que brinda servicios legales de excelencia. </p>
+            <p class="firma-inicio__text">Uno desus principales ámbitos de acción es el Derecho Penal Económico y de la Empresa, así como el Corporate Defense y Compliance. </p>
+            <p class="firma-inicio__text">Gracias a nuestro equipo de expertos, satisfacemos las necesidades de nuestros clientes con eficacia.</p>
+            <a class="btn btn-danger firma-inicio__buttom" href="#" role="button">Conoce más</a>
+        </div>
+    </section>
+    <section class="row firma-especialidades">
+        <h1 class="firma-especialidades__title fw-bold">Especialidades</h1>
+        <p class="firma-especialidades__text">Nuestro estudio cuenta con una basta experiencia en las siguientes especialidades de servicios legales:</p>
+        <div class="firma-especialidades__container">
+            <div class="row firma-especialidades__items">
+                <div class="col-6 col-lg-4 items-especialidades">
+                    <a class="items-especialidades__link" href="">
+                        <div class="items-especialidades__container">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <p class="items-especialidades__text fw-bold">Derecho penal empresarial</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 items-especialidades">
+                    <a class="items-especialidades__link" href="">
+                        <div class="items-especialidades__container">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <p class="items-especialidades__text fw-bold">Litigios penales y solución de controversias</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 items-especialidades">
+                    <a class="items-especialidades__link" href="">
+                        <div class="items-especialidades__container">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <p class="items-especialidades__text fw-bold">Asesoría penal empresarial</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 items-especialidades">
+                    <a class="items-especialidades__link" href="">
+                        <div class="items-especialidades__container">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <p class="items-especialidades__text fw-bold">Derecho penal de la administración pública</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 items-especialidades">
+                    <a class="items-especialidades__link" href="">
+                        <div class="items-especialidades__container">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <p class="items-especialidades__text fw-bold">Corporate compliance</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 items-especialidades">
+                    <a class="items-especialidades__link" href="">
+                        <div class="items-especialidades__container">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <p class="items-especialidades__text fw-bold">Consultoría</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row publicacion-inicio">
+        <h1 class="publicacion-inicio__title fw-bold">Publicaciones</h1>
+        <div class="row publicacion-inicio__container">
+            <div class="col-12 col-lg-2 publicacion-inicio__group">
+                <ul class="nav nav-pills mb-3 shadow publicacion-inicio__tab" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fw-bold publicacion-inicio__button active" id="pills-juris-tab" data-bs-toggle="pill" data-bs-target="#pills-juris" type="button" role="tab" aria-controls="pills-juris" aria-selected="true">Jurisprudencia</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fw-bold publicacion-inicio__button" id="pills-bole-tab" data-bs-toggle="pill" data-bs-target="#pills-bole" type="button" role="tab" aria-controls="pills-bole" aria-selected="false">Boletines</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fw-bold publicacion-inicio__button" id="pills-art-tab" data-bs-toggle="pill" data-bs-target="#pills-art" type="button" role="tab" aria-controls="pills-art" aria-selected="false">Artículos</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-10 publicacion-inicio__group">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-juris" role="tabpanel" aria-labelledby="pills-juris-tab">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="card card-inicio">
+                                    <img src="./apps/img/index/especialidad.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-inicio__date">17/05/2021</p>
+                                        <a class="card-title fw-bold card-inicio__title" href="">El delito de abuso de autoridad. Consideraciones dogmáticas y político criminales</a>
+                                        <p class="fw-bold card-inicio__author">Por: Raúl Pariona</p>
+                                        <p class="card-text">En un Estado democrático de Derecho, el poder nunca es absoluto, sino más bien limitado. En ese sentido, cuando los funcionarios públicos se exceden en sus funciones o atribuciones, corresponde una reacción de parte del ordenamiento.</p>
+                                        <p class="card-text">En el presente artículo, el autor realiza una explicación y un análisis sobre el delito de abuso de autoridad. De acuerdo a la doctrina nacional e internacional, y a la jurisprudencia peruana, el autor señala cómo entender el bien jurídico que se protege, la tipicidad objetiva y subjetiva, los sujetos activo y pasivo, así como la pena en este delito.</p>
+                                        <div class="share">
+                                            <a href="#" class="btn btn-primary share__button"><i class="fas fa-file-download"></i> Descargar</a>
+                                            <a class="share__link" href=""><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-twitter-square share__icon share__icon--twitter"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-linkedin share__icon share__icon--linkedin"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-whatsapp share__icon share__icon--whatsapp"></i></a>
+                                            <a class="share__link" href=""><i class="fas fa-link share__icon share__icon--link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="card card-inicio">
+                                    <div class="card-body">
+                                        <p class="card-inicio__date">17/05/2021</p>
+                                        <a class="card-title card-inicio__title fw-bold" href="">La suspensión de la prescripción en el Código Procesal Penal de 2004 según el Acuerdo Plenario N° 03-2012/CJ-116</a>
+                                        <p class="fw-bold card-inicio__author">Por: Raúl Pariona</p>
+                                        <div class="share">
+                                            <a href="#" class="btn btn-primary share__button"><i class="fas fa-file-download"></i> Descargar</a>
+                                            <a class="share__link" href=""><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-twitter-square share__icon share__icon--twitter"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-linkedin share__icon share__icon--linkedin"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-whatsapp share__icon share__icon--whatsapp"></i></a>
+                                            <a class="share__link" href=""><i class="fas fa-link share__icon share__icon--link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-inicio">
+                                    <div class="card-body">
+                                        <p class="card-inicio__date">17/05/2021</p>
+                                        <a class="card-title card-inicio__title fw-bold" href="">La prescripción en el Código Procesal Penal de 2004 – ¿Suspensión o interrupción de la prescripción?</a>
+                                        <p class="fw-bold card-inicio__author">Por: Raúl Pariona</p>
+                                        <div class="share">
+                                            <a href="#" class="btn btn-primary share__button"><i class="fas fa-file-download"></i> Descargar</a>
+                                            <a class="share__link" href=""><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-twitter-square share__icon share__icon--twitter"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-linkedin share__icon share__icon--linkedin"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-whatsapp share__icon share__icon--whatsapp"></i></a>
+                                            <a class="share__link" href=""><i class="fas fa-link share__icon share__icon--link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-inicio">
+                                    <div class="card-body">
+                                        <p class="card-inicio__date">17/05/2021</p>
+                                        <a class="card-title card-inicio__title fw-bold" href="">La suspensión de la prescripción en el Código Procesal Penal de 2004 según el Acuerdo Plenario N° 03-2012/CJ-116</a>
+                                        <p class="fw-bold card-inicio__author">Por: Raúl Pariona</p>
+                                        <div class="share">
+                                            <a href="#" class="btn btn-primary share__button"><i class="fas fa-file-download"></i> Descargar</a>
+                                            <a class="share__link" href=""><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-twitter-square share__icon share__icon--twitter"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-linkedin share__icon share__icon--linkedin"></i></a>
+                                            <a class="share__link" href=""><i class="fab fa-whatsapp share__icon share__icon--whatsapp"></i></a>
+                                            <a class="share__link" href=""><i class="fas fa-link share__icon share__icon--link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-plus">
+                                    <a href="#" class="btn btn-primary button-plus__link"><i class="fas fa-plus"></i> Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-bole" role="tabpanel" aria-labelledby="pills-bole-tab">tab2</div>
+                    <div class="tab-pane fade" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab">tab3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row actualidad-inicio">
+        <h1 class="actualidad-inicio__title fw-bold">Actualidad</h1>
+        <div class="row actualidad-inicio__container">
+            <div class="col-12 col-lg-9 actualidad-inicio__card">
+                <div class="card-actualidad">
+                    <img class="card-actualidad__img rounded" src="./apps/img/index/especialidad.jpg" alt="">
+                    <div class="card-actualidad__body">
+                        <p class="card-actualidad__date">19/05/20201</p>
+                        <a class="card-actualidad__title card-actualidad__title--desktop fw-bold" href="">¿Informe de OCMA emitido en procedimiento en trámite a juez es información de acceso público?</a>
+                        <div class="share share--actualidad share--desktop">
+                            <a class="share__link" href=""><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
+                            <a class="share__link" href=""><i class="fab fa-twitter-square share__icon share__icon--twitter"></i></a>
+                            <a class="share__link" href=""><i class="fab fa-linkedin share__icon share__icon--linkedin"></i></a>
+                            <a class="share__link" href=""><i class="fab fa-whatsapp share__icon share__icon--whatsapp"></i></a>
+                            <a class="share__link" href=""><i class="fas fa-link share__icon share__icon--link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 news-container">
+                <div class="news-actualidad">
+                    <p class="news-actualidad__date">19/05/2021</p>
+                    <a class="news-actualidad__title news-actualidad__title--desktop fw-bold" href="">No existe cosa juzgada en materia de fijación de pensiones alimentarias</a>
+                    <div class="share share--actualidad">
+                        <a class="share__link" href=""><i class="fab fa-facebook-square share__icon share__icon--facebook share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fab fa-twitter-square share__icon share__icon--twitter share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fab fa-linkedin share__icon share__icon--linkedin share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fab fa-whatsapp share__icon share__icon--whatsapp share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fas fa-link share__icon share__icon--link share__icon--actualidad"></i></a>
+                    </div>
+                </div>
+                <div class="news-actualidad">
+                    <p class="news-actualidad__date">19/05/2021</p>
+                    <a class="news-actualidad__title news-actualidad__title--desktop fw-bold" href="">No existe cosa juzgada en materia de fijación de pensiones alimentarias</a>
+                    <div class="share share--actualidad">
+                        <a class="share__link" href=""><i class="fab fa-facebook-square share__icon share__icon--facebook share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fab fa-twitter-square share__icon share__icon--twitter share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fab fa-linkedin share__icon share__icon--linkedin share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fab fa-whatsapp share__icon share__icon--whatsapp share__icon--actualidad"></i></a>
+                        <a class="share__link" href=""><i class="fas fa-link share__icon share__icon--link share__icon--actualidad"></i></a>
+                    </div>
+                </div>
+                <div class="button-plus">
+                    <a href="#" class="btn btn-primary button-plus__link"><i class="fas fa-plus"></i> Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

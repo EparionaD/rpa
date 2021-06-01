@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Especialidades | RPA{% endblock title %}
+
+{% if request.path == '/especialidades/' %}
+    {% block fondo %}
+        style="background-image: url('..{% static 'img/fondos/especialidades.jpg' %}');"
+    {% endblock fondo %}
+    {% block main %}especialidades{% endblock main %}
+{% endif %}
+
+{% block header %}
+    <div class="row position-relative portada">
+        <h1 class="text-white titulo-portada__title">Especialidades</h1>
+        <div class="text-white titulo-portada__text">
+            El Estudio Pariona Abogados es una firma de abogados especializada en Derecho Penal que brinda servicios legales de excelencia. 
+            Uno de sus principales ámbitos de acción es el Derecho Penal Económico y de la Empresa, así como el Corporate Defense y Compliance. 
+            Gracias a nuestro equipo de expertos, satisfacemos las necesidades de nuestros clientes con eficacia.
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <section class="especialidades__section">
+        <div class="container-fluid especialidades__container">
+            <div class="row mb-3 mb-lg-5 espec-detalle">
+                <div class="col-12 col-lg-3 position-relative espec-detalle__back">
+                    <div class="position-absolute top-100 start-50 translate-middle espec-detalle__container-img">
+                        <img class="rounded-circle espec-detalle__img" src="{% static 'img/especialidades/penal.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 bg-white espec-detalle__container-text">
+                    <h5 class="fw-bold text-center text-lg-start espec-detalle__title">Derecho penal empresarial</h5>
+                    <div class="espec-detalle__text">
+                        Asesoría y defensa penal especializada orientada a prevenir, controlar y gestionar las contingencias penales en el ámbito de la actividad empresarial.<br> 
+                        Nuestra Firma esta especiliazada en Derecho penal patrimonial y contratación pública, Derecho penal tributario, Derecho penal financiero, Derecho penal de la administración pública, Derecho penal ambiental, Derecho penal de lavado de activos y demás ambitos del Derecho penal económico y de la empresa.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 mb-lg-5 espec-detalle">
+                <div class="col-12 col-lg-3 position-relative order-lg-5 espec-detalle__back espec-detalle__back--side">
+                    <div class="position-absolute top-100 start-50 translate-middle espec-detalle__container-img--side">
+                        <img class="rounded-circle espec-detalle__img" src="{% static 'img/especialidades/penal.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 bg-white order-lg-1 espec-detalle__container-text espec-detalle__container-text--side">
+                    <h5 class="fw-bold text-center text-lg-start espec-detalle__title">Litigios penales y solución de controversias</h5>
+                    <div class="espec-detalle__text">
+                        Nuestro Estudio está especializado en la defensa penal, patrocina con éxito los intereses de nuestros clientes en todo tipo de litigios penales.<br>
+                        También asesoramos, participamos y representamos a nuestros clientes en negociaciones con resultados exitosos.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 mb-lg-5 espec-detalle">
+                <div class="col-12 col-lg-3 position-relative espec-detalle__back">
+                    <div class="position-absolute top-100 start-50 translate-middle espec-detalle__container-img">
+                        <img class="rounded-circle espec-detalle__img" src="{% static 'img/especialidades/penal.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 bg-white espec-detalle__container-text">
+                    <h5 class="fw-bold text-center text-lg-start espec-detalle__title">Asesoría penal empresarial integral</h5>
+                    <div class="espec-detalle__text">
+                        El Estudio brinda asesoría penal permanente a las empresas en todas las etapas de su desarrollo y actividad comercial.<br>
+                        Los casos penales son abordados y tratados con un equipo multidiciplinario de especialistas en Derecho Constitucional, Derecho Administativo, Derecho Ambiental, Derecho Civil, Derecho Comercial, Derecho Laboral, Derecho Tributario y otras especialidades.<br>
+                        El enfoque integral permite una estrategia eficaz y da seguridad a la actividad del empresario.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 mb-lg-5 espec-detalle">
+                <div class="col-12 col-lg-3 position-relative order-lg-5 espec-detalle__back espec-detalle__back--side">
+                    <div class="position-absolute top-100 start-50 translate-middle espec-detalle__container-img--side">
+                        <img class="rounded-circle espec-detalle__img" src="{% static 'img/especialidades/penal.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 bg-white order-lg-1 espec-detalle__container-text espec-detalle__container-text--side">
+                    <h5 class="fw-bold text-center text-lg-start espec-detalle__title">Derecho penal de la administración pública</h5>
+                    <div class="espec-detalle__text">
+                        Nuestra Estudio brinda asesoría y defensa penal integral en materia de delitos contra la administración pública y procedimientos administrativos.<br>
+                        El patrocinio está orientado a la defensa eficaz de los intereses de las empresas contratistas, sus representantes, los ciudadanos administrados y funcionarios públicos.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 mb-lg-5 espec-detalle">
+                <div class="col-12 col-lg-3 position-relative espec-detalle__back">
+                    <div class="position-absolute top-100 start-50 translate-middle espec-detalle__container-img">
+                        <img class="rounded-circle espec-detalle__img" src="{% static 'img/especialidades/penal.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 bg-white espec-detalle__container-text">
+                    <h5 class="fw-bold text-center text-lg-start espec-detalle__title">Corporate compliance</h5>
+                    <div class="espec-detalle__text">
+                        La asesoría preventiva está orientada a evitar que las organizaciones, empresas y sus representantes incurran en delitos.<br>
+                        La asesoría que brindamos permite gestionar las contingencias penales en que puedan incurrir los representantes de las empresas.<br>
+                        Nuestra firma diseña e implementa programas de cumplimiento para empresas de todos los niveles: pequeña, mediana y gran empresa.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 mb-lg-5 espec-detalle">
+                <div class="col-12 col-lg-3 position-relative order-lg-5 espec-detalle__back espec-detalle__back--side">
+                    <div class="position-absolute top-100 start-50 translate-middle espec-detalle__container-img--side">
+                        <img class="rounded-circle espec-detalle__img" src="{% static 'img/especialidades/penal.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 bg-white order-lg-1 espec-detalle__container-text espec-detalle__container-text--side">
+                    <h5 class="fw-bold text-center text-lg-start espec-detalle__title">Consultoría</h5>
+                    <div class="espec-detalle__text">
+                        Gracias a la experticia de nuestros miembros formados en el Perú y en el extranjero, quienes se desempeñan como profesores y expertos prácticos, nuestro Estudio realiza consultorías, capacitaciones, cursos y elabora informes legales a nivel nacional e internacional.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
