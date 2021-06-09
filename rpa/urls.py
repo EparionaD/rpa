@@ -25,6 +25,8 @@ urlpatterns = [
     path('', include(('apps.inicio.urls','index'))),
     path('catedra/', include(('apps.catedra.urls','catedra'))),
     path('equipo/', include(('apps.equipo.urls','equipo'))),
+    path('publicaciones/', include(('apps.publicaciones.urls','publicaciones'))),
+    path('actualidades/', include(('apps.actualidades.urls','actualidades'))),
 ]
 
 if settings.DEBUG:

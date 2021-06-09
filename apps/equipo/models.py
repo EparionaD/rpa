@@ -9,6 +9,7 @@ class Equipo(models.Model):
     grade = models.CharField('Grado académico', max_length=255, blank=True, null=True)
     bio = RichTextUploadingField('Biografía', blank=False, null=False)
     photo = models.ImageField('Fotografía', upload_to='equipo/')
+    cv = models.FileField('Curriculum Vitae', upload_to='cv/', blank=True, null=True)
     email = models.EmailField('Correo electrónico', max_length=255, blank=True, null=True)
     facebook = models.CharField('Facebook', max_length=255, blank=True, null=True)
     twitter = models.CharField('Twitter', max_length=255, blank=True, null=True)

@@ -7,7 +7,7 @@
     <meta property="og:url"           content="http://www.rpa.pe{% url 'catedra:detalle' detalle.slug %}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ detalle.title }}" />
-    <meta property="og:description"   content="{{ detalle.description }}" />
+    <meta property="og:description"   content="{{ detalle.description|safe }}" />
     <meta property="og:image"         content="{{ detalle.photo.url }}" />
 {% endblock meta %}
 
@@ -62,9 +62,12 @@
                             <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'catedra:detalle' detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
                             <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="fb-messenger://share/?link=http%3A%2F%www.rpa.pe%2F{% url 'catedra:detalle' detalle.slug %}&app_id=461521414055119"><i class="fab fa-facebook-messenger"></i></a>
                             <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'catedra:detalle' detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
-                            <a class="social__link social__link social__link--detailpubli" target="_blank" href=""><i class="fab fa-linkedin"></i></a>
+                            <a class="social__link social__link social__link--detailpubli" target="_blank" onclick="getLink({{ detalle.id }})"><i class="fas fa-link"></i></a>
                         </div>
                     </div>
+                </div>
+                <div class="alert alert-warning alert-dismissible fade show animate__animated d-none" role="alert" id="{{ detalle.id }}">
+                    <strong>Enlace copiado!</strong>
                 </div>
             </div>
         </div>

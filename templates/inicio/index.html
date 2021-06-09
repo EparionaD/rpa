@@ -16,6 +16,16 @@
         </div>
     {% endblock header %}
     
+    {% block social-movil %}
+        <div class="col-12 col-lg-2 social social--movil d-inline-block d-lg-none">
+            <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/pariona.abogados"><i class="fab fa-facebook-square"></i></a>
+            <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-twitter-square"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="https://m.me/pariona.abogados"><i class="fab fa-facebook-messenger"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="https://api.whatsapp.com/send?phone=51987407711"><i class="fab fa-whatsapp"></i></a>
+            <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    {% endblock social-movil %}
+
     {% block header-detalle %}
         <div class="row shadow banner">
             <div class="banner__container">
@@ -37,14 +47,14 @@
 {% block content %}
     <section class="row firma-inicio">
         <div class="col-12 col-lg-5">
-            <img class="img-fluid firma-inicio__img shadow" src="./apps/img/index/index-firma.jpg" alt="Firma">
+            <img class="img-fluid firma-inicio__img shadow" src="{% static 'img/index/index-firma.jpg' %}" alt="Firma">
         </div>
         <div class="col-12 col-lg-7 firma-inicio__containertext">
             <h1 class="fw-bold firma-inicio__title">La Firma</h1>
             <p class="firma-inicio__text">El Estudio Pariona Abogados es una firma de abogados especializada en Derecho Penal que brinda servicios legales de excelencia. </p>
             <p class="firma-inicio__text">Uno desus principales ámbitos de acción es el Derecho Penal Económico y de la Empresa, así como el Corporate Defense y Compliance. </p>
             <p class="firma-inicio__text">Gracias a nuestro equipo de expertos, satisfacemos las necesidades de nuestros clientes con eficacia.</p>
-            <a class="btn btn-danger firma-inicio__buttom" href="#" role="button">Conoce más</a>
+            <a class="btn btn-danger firma-inicio__buttom" href="{% url 'index:firma' %}" role="button">Conoce más</a>
         </div>
     </section>
     <section class="row firma-especialidades">
@@ -55,7 +65,7 @@
                 <div class="col-6 col-lg-4 items-especialidades">
                     <a class="items-especialidades__link" href="">
                         <div class="items-especialidades__container">
-                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/especialidad.jpg' %}" alt="">
                             <p class="items-especialidades__text fw-bold">Derecho penal empresarial</p>
                         </div>
                     </a>
@@ -63,7 +73,7 @@
                 <div class="col-6 col-lg-4 items-especialidades">
                     <a class="items-especialidades__link" href="">
                         <div class="items-especialidades__container">
-                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/especialidad.jpg' %}" alt="">
                             <p class="items-especialidades__text fw-bold">Litigios penales y solución de controversias</p>
                         </div>
                     </a>
@@ -71,7 +81,7 @@
                 <div class="col-6 col-lg-4 items-especialidades">
                     <a class="items-especialidades__link" href="">
                         <div class="items-especialidades__container">
-                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/especialidad.jpg' %}" alt="">
                             <p class="items-especialidades__text fw-bold">Asesoría penal empresarial</p>
                         </div>
                     </a>
@@ -79,7 +89,7 @@
                 <div class="col-6 col-lg-4 items-especialidades">
                     <a class="items-especialidades__link" href="">
                         <div class="items-especialidades__container">
-                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/especialidad.jpg' %}" alt="">
                             <p class="items-especialidades__text fw-bold">Derecho penal de la administración pública</p>
                         </div>
                     </a>
@@ -87,7 +97,7 @@
                 <div class="col-6 col-lg-4 items-especialidades">
                     <a class="items-especialidades__link" href="">
                         <div class="items-especialidades__container">
-                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/especialidad.jpg' %}" alt="">
                             <p class="items-especialidades__text fw-bold">Corporate compliance</p>
                         </div>
                     </a>
@@ -95,7 +105,7 @@
                 <div class="col-6 col-lg-4 items-especialidades">
                     <a class="items-especialidades__link" href="">
                         <div class="items-especialidades__container">
-                            <img class="img-fluid rounded-circle items-especialidades__img" src="./apps/img/index/especialidad.jpg" alt="">
+                            <img class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/especialidad.jpg' %}" alt="">
                             <p class="items-especialidades__text fw-bold">Consultoría</p>
                         </div>
                     </a>

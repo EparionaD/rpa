@@ -3,17 +3,17 @@
 }
 
 .portada {
-  padding-top: 21rem;
+  padding-top: 16rem;
   z-index: 110;
 }
 @media only screen and (min-width: 576px) {
   .portada {
-    padding-top: 22rem;
+    padding-top: 20rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .portada {
-    padding-top: 24rem;
+    padding-top: 20rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -73,7 +73,7 @@
   .portada--publicaciones {
     padding-left: 6rem;
     padding-top: 16rem;
-    width: 75%;
+    width: 85%;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -82,16 +82,54 @@
     padding-top: 18rem;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .portada--publicaciones {
-    width: 65%;
+    width: 75%;
   }
 }
 @media only screen and (min-width: 1800px) {
   .portada--publicaciones {
     padding-left: 10rem;
     padding-top: 24rem;
-    width: 55%;
+    width: 65%;
+  }
+}
+.portada--alto {
+  padding-top: 14rem;
+}
+@media only screen and (min-width: 576px) {
+  .portada--alto {
+    padding-top: 16rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .portada--alto {
+    padding-top: 18rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .portada--alto {
+    padding-left: 6rem;
+    padding-top: 14rem;
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .portada--alto {
+    padding-left: 8rem;
+    padding-top: 16rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .portada--alto {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .portada--alto {
+    padding-left: 10rem;
+    padding-top: 22rem;
+    width: 65%;
   }
 }
 
@@ -276,8 +314,13 @@
   text-align: right;
 }
 
+.link-copy {
+  top: 85%;
+}
+
 /* Inicio de Index */
 .headerrpa {
+  background-image: url("../../../apps/img/fondo.jpg");
   background-size: cover;
   height: 630px;
   position: relative;

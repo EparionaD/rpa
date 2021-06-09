@@ -88,3 +88,65 @@ window.onscroll = function(){
         quitarTamano()
     }
 }
+
+function agregarAlerta(elemento1){
+    let alerta = document.getElementById(elemento1)
+    alerta.classList.add('animate__fadeInUp')
+    alerta.classList.remove('d-none')
+}
+function quitarAlerta(elemento1){
+    let alerta = document.getElementById(elemento1)
+    alerta.classList.remove('animate__fadeInUp')
+    alerta.classList.add('d-none')
+}
+function agregarAlertaUp(){
+    let alerta = document.getElementById('alertaup')
+    alerta.classList.add('animate__fadeInUp')
+    alerta.classList.remove('d-none')
+}
+function quitarAlertaUp(){
+    let alerta = document.getElementById('alertaup')
+    alerta.classList.remove('animate__fadeInUp')
+    alerta.classList.add('d-none')
+}
+
+function getLink(elemento){
+    let campo = document.createElement('input')
+    campo.setAttribute('value', window.location.href)
+
+    document.body.appendChild(campo)
+    campo.select()
+    document.execCommand('copy')
+    document.body.removeChild(campo)
+    
+    agregarAlerta(elemento)
+    setTimeout(quitarAlerta,2000,elemento)
+}
+
+function getLinkUp(){
+    let campo = document.createElement('input')
+    campo.setAttribute('value', window.location.href)
+
+    document.body.appendChild(campo)
+    campo.select()
+    document.execCommand('copy')
+    document.body.removeChild(campo)
+    
+    agregarAlertaUp()
+    setTimeout(quitarAlertaUp,2000)
+}
+
+
+function Links(elemento, elemento1){
+    let valor = document.getElementById(elemento).getAttribute('campo')
+
+    let valorLink = document.createElement('input')
+    valorLink.setAttribute('value', valor)
+    document.body.appendChild(valorLink)
+    valorLink.select()
+    document.execCommand('copy')
+    document.body.removeChild(valorLink)
+
+    agregarAlerta(elemento1)
+    setTimeout(quitarAlerta,2000,elemento1)
+}
