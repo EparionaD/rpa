@@ -932,7 +932,9 @@
   }
 }
 .publicacion-inicio__button {
+  width: inherit;
   font-size: 0.9rem;
+  text-align: left;
 }
 @media only screen and (min-width: 1800px) {
   .publicacion-inicio__button {
@@ -975,6 +977,9 @@
     padding-right: calc(var(--bs-gutter-x) / 2);
     padding-left: calc(var(--bs-gutter-x) / 2);
   }
+}
+.publicacion-inicio__list {
+  width: 100%;
 }
 @media only screen and (min-width: 992px) {
   .publicacion-inicio__tab {
@@ -1122,7 +1127,7 @@
 }
 @media only screen and (min-width: 1800px) {
   .news-actualidad__title--desktop {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
