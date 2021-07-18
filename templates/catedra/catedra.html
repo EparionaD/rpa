@@ -55,7 +55,7 @@
                         <div class="row mb-3">
                         {% for principal in cursos|slice:":1" %}
                             <div class="col-12 d-flex flex-column flex-lg-row">
-                                <img class="catedra__img" src="{{ principal.photo.url }}" alt="">
+                                <img loading="lazy" class="catedra__img catedra__img--principal" src="{{ principal.photo.url }}" alt="">
                                 <div class="bg-white p-4 p-xxl-5 catedra__container">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row mb-4 mb-lg-2 mb-xl-4">
@@ -90,7 +90,7 @@
                         <div class="row">
                         {% for secundario in cursos|slice:"1:" %}
                             <div class="col-12 col-lg-4">
-                                <img class="img-fluid catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="">
+                                <img loading="lazy" class="img-fluid catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="">
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ secundario.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row mb-4 mb-lg-2 mb-xl-4">
@@ -128,7 +128,7 @@
                         <div class="row mb-3">
                         {% for principal in seminarios|slice:":1" %}
                             <div class="col-12 d-flex flex-column flex-lg-row">
-                                <img class="catedra__img" src="{{ principal.photo.url }}" alt="">
+                                <img loading="lazy" class="catedra__img catedra__img--principal" src="{{ principal.photo.url }}" alt="">
                                 <div class="bg-white p-4 p-xxl-5 catedra__container">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row mb-4 mb-lg-2 mb-xl-4">
@@ -163,7 +163,7 @@
                         <div class="row">
                         {% for secundario in seminarios|slice:"1:" %}
                             <div class="col-12 col-lg-4">
-                                <img class="img-fluid catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="">
+                                <img loading="lazy" class="img-fluid catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="">
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ secundario.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row mb-4 mb-lg-2 mb-xl-4">
@@ -201,7 +201,7 @@
                         <div class="row mb-3">
                         {% for principal in conversatorios|slice:":1" %}
                             <div class="col-12 d-flex flex-column flex-lg-row">
-                                <img class="catedra__img" src="{{ principal.photo.url }}" alt="">
+                                <img loading="lazy" class="catedra__img catedra__img--principal" src="{{ principal.photo.url }}" alt="">
                                 <div class="bg-white p-4 p-xxl-5 catedra__container">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row mb-4 mb-lg-2 mb-xl-4">
@@ -236,7 +236,7 @@
                         <div class="row">
                         {% for secundario in conversatorios|slice:"1:" %}
                             <div class="col-12 col-lg-4">
-                                <img class="img-fluid catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="">
+                                <img loading="lazy" class="img-fluid catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="">
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ secundario.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row mb-4 mb-lg-2 mb-xl-4">

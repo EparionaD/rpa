@@ -19,20 +19,25 @@
 @media only screen and (min-width: 992px) {
   .portada {
     padding-left: 6rem;
-    padding-top: 16rem;
+    padding-top: 22rem;
     width: 55%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .portada {
     padding-left: 8rem;
-    padding-top: 18rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .portada {
+    padding-left: 8rem;
+    padding-top: 24rem;
   }
 }
 @media only screen and (min-width: 1800px) {
   .portada {
     padding-left: 10rem;
-    padding-top: 28rem;
+    padding-top: 32rem;
   }
 }
 .portada__link {
@@ -130,6 +135,58 @@
     padding-left: 10rem;
     padding-top: 22rem;
     width: 65%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .portada--equipo {
+    padding-left: 6rem;
+    padding-top: 26rem;
+    width: 55%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .portada--equipo {
+    padding-left: 8rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .portada--equipo {
+    padding-left: 8rem;
+    padding-top: 28rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .portada--equipo {
+    padding-left: 10rem;
+    padding-top: 34rem;
+  }
+}
+.portada--actualidad {
+  padding-top: 22rem;
+}
+@media only screen and (min-width: 992px) {
+  .portada--actualidad {
+    padding-left: 6rem;
+    padding-top: 18rem;
+    width: 65%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .portada--actualidad {
+    padding-left: 8rem;
+    padding-top: 20rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .portada--actualidad {
+    padding-left: 8rem;
+    padding-top: 20rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .portada--actualidad {
+    padding-left: 10rem;
+    padding-top: 30rem;
   }
 }
 
@@ -231,10 +288,9 @@
 }
 .social--movil {
   padding: 0.5rem 0;
-  position: relative;
   text-align: center;
+  top: 70%;
   z-index: 100;
-  margin-top: 4rem;
 }
 .social--desktop {
   align-items: center;
@@ -318,6 +374,14 @@
   top: 85%;
 }
 
+h1, h2, h3, h4, h5, a {
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+}
+
 /* Inicio de Index */
 .headerrpa {
   background-image: url("../../../apps/img/fondo.jpg");
@@ -347,33 +411,13 @@
 }
 .headerrpa__containertext {
   color: white;
-  padding-top: 14rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  position: relative;
   text-align: center;
   z-index: 500;
-}
-@media only screen and (min-width: 576px) {
-  .headerrpa__containertext {
-    padding-top: 16rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .headerrpa__containertext {
-    padding-top: 18rem;
-  }
+  top: 50%;
 }
 @media only screen and (min-width: 992px) {
   .headerrpa__containertext {
-    padding-top: 22rem;
-  }
-}
-@media only screen and (min-width: 1800px) {
-  .headerrpa__containertext {
-    padding-top: 24rem;
+    top: 65%;
   }
 }
 .headerrpa__text {
@@ -571,30 +615,16 @@
 .banner {
   background-color: #D42C30;
   border-radius: 0.5rem;
-  bottom: -16%;
   color: white;
   margin-left: auto;
   margin-right: auto;
-  left: 10%;
   padding: 1rem;
   position: absolute;
   z-index: 100;
   width: 80%;
 }
-@media only screen and (min-width: 576px) {
-  .banner {
-    bottom: -14%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .banner {
-    bottom: -13%;
-  }
-}
 @media only screen and (min-width: 992px) {
   .banner {
-    bottom: -11%;
-    left: 5%;
     padding: 2.5rem;
     width: 90%;
     display: flex;
@@ -603,19 +633,16 @@
 }
 @media only screen and (min-width: 1200px) {
   .banner {
-    bottom: -12%;
     padding: 2.5rem;
   }
 }
 @media only screen and (min-width: 1400px) {
   .banner {
-    bottom: -14%;
     padding: 3rem;
   }
 }
 @media only screen and (min-width: 1800px) {
   .banner {
-    bottom: -13.5%;
     padding: 3.5rem;
   }
 }
@@ -640,17 +667,17 @@
 }
 @media only screen and (min-width: 992px) {
   .banner__icon {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .banner__icon {
-    font-size: 2.2rem;
+    font-size: 2.9rem;
   }
 }
 @media only screen and (min-width: 1400px) {
   .banner__icon {
-    font-size: 2.4rem;
+    font-size: 2.9rem;
   }
 }
 .banner__text {
@@ -1080,11 +1107,7 @@
 @media only screen and (min-width: 992px) {
   .card-actualidad__img {
     height: max-content;
-  }
-}
-@media only screen and (min-width: 1800px) {
-  .card-actualidad__img {
-    width: 60%;
+    width: 50%;
   }
 }
 .card-actualidad__title {
@@ -1852,6 +1875,7 @@
 .contacto__street {
   background-color: #f7f7f7;
   padding: 2rem 2rem;
+  border-bottom: 1px solid #9B070B;
 }
 @media only screen and (min-width: 992px) {
   .contacto__street {
@@ -1885,20 +1909,23 @@
 }
 @media only screen and (min-width: 992px) {
   .catedra__img {
-    width: 150%;
+    width: 100%;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-top-right-radius: 0;
   }
 }
-@media only screen and (min-width: 1800px) {
-  .catedra__img {
-    width: 100%;
-  }
-}
 .catedra__img--thumbnail {
   border-bottom-left-radius: 0;
   border-top-right-radius: 0.5rem;
+}
+.catedra__img--principal {
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .catedra__img--principal {
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 992px) {
   .catedra__title {

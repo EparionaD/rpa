@@ -31,7 +31,7 @@
 
 {% block header %}
     {% for actualidad in actualidades|slice:":1" %}
-    <div class="row position-relative portada">
+    <div class="row position-relative portada portada--actualidad">
         <a class="fw-bold lh-sm portada__link" href="{% url 'actualidades:detalle' actualidad.slug %}">{{ actualidad.title }}</a>
         <div class="share mt-4">
             <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'actualidades:detalle' actualidad.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
