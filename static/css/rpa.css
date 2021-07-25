@@ -233,12 +233,17 @@
 }
 @media only screen and (min-width: 576px) {
   .espaciado-catedra {
-    padding: 0rem 6rem;
+    padding: 0rem 2rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .espaciado-catedra {
-    padding: 0rem 8rem;
+    padding: 0rem 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .espaciado-catedra {
+    padding: 0rem 6rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -329,7 +334,7 @@
   padding: 0.5rem 0;
   position: absolute;
   text-align: center;
-  top: 70%;
+  top: 80%;
   z-index: 100;
 }
 .social--desktop {
@@ -2014,6 +2019,13 @@ p, div {
   width: 100%;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0 !important;
+}
+@media only screen and (min-width: 768px) {
+  .catedra__img {
+    border-bottom-left-radius: 0.5rem !important;
+    border-top-right-radius: 0;
+  }
 }
 @media only screen and (min-width: 992px) {
   .catedra__img {
@@ -2024,7 +2036,7 @@ p, div {
   }
 }
 .catedra__img--thumbnail {
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0 !important;
   border-top-right-radius: 0.5rem;
 }
 .catedra__img--principal {
@@ -2074,7 +2086,12 @@ p, div {
   font-size: 1.3rem;
 }
 .catedra-detalle__ponente {
-  font-size: 1.2rem;
+  width: auto;
+}
+@media only screen and (min-width: 992px) {
+  .catedra-detalle__ponente {
+    width: 70%;
+  }
 }
 .catedra-detalle__title {
   display: inline-block;
@@ -2097,10 +2114,6 @@ p, div {
 
 .link-catedra:hover {
   color: #9B070B;
-}
-
-.catedra-fondo {
-  background-color: #f7f7f7;
 }
 
 .publicacion-autor {

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView
-from .models import Catedra, Categorias
+from .models import Catedra, Categorias, Speaker
 
 class CatedraView(TemplateView):
     template_name = 'catedra/catedra.html'
@@ -14,7 +14,19 @@ class CatedraView(TemplateView):
 
         return context
 
-class CatedraDetailView(DetailView):
-    model = Catedra
+# class CatedraDetailView(DetailView):
+#     model = Catedra
+#     template_name = 'catedra/detalle.html'
+#     context_object_name = 'detalle'
+
+class CatedraDetailView(TemplateView):
     template_name = 'catedra/detalle.html'
-    context_object_name = 'detalle'
+
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        all_cathedra = Catedra.objects.get(slug=kwargs['slug'])
+        all_speakers = Speaker.objects.filter(catedra=all_cathedra)
+        context['detalle'] = all_cathedra
+        context['speakers'] = all_speakers
+        return context

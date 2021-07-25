@@ -38,7 +38,7 @@ class Catedra(models.Model):
     cost = models.CharField('Costo:', max_length=50, blank=True, null=True)
     contact_number = models.CharField('Escribemos:', max_length=50, blank=True, null=True)
     syllabus = RichTextUploadingField('Plan de estudios', blank=True, null=True)
-    speaker = RichTextUploadingField('Docentes:', blank=True, null=True)
+    # speaker = RichTextUploadingField('Docentes:', blank=True, null=True)
     profit = RichTextUploadingField('Beneficios:', blank=True, null=True)
     cathedra = RichTextUploadingField('El enfoque de aprendizaje de Cátedra:', blank=True, null=True)
     time = models.TimeField('Hora', auto_now=False, auto_now_add=False)
@@ -57,3 +57,13 @@ class Catedra(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Catedra, self).save(*args, **kwargs)
+
+class Speaker(models.Model):
+    catedra = models.ForeignKey(Catedra, null=True, blank=True, on_delete=models.CASCADE)
+    name = models.CharField('Docente', max_length=150, blank=True, null=True)
+    description = RichTextUploadingField('Descripción', blank=True, null=True)
+    image = models.ImageField('Portada', upload_to='foto-ponente/', blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Datos del docente"
+        verbose_name_plural = "Datos de los docentes"

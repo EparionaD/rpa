@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Catedra, Categorias
+from .models import Catedra, Categorias, Speaker
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
@@ -11,6 +11,9 @@ class CatedraResource(resources.ModelResource):
     class Meta:
         model = Catedra
 
+class SpeakerAdmin(admin.StackedInline):
+    model = Speaker
+
 class CategoriasAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     prepopulated_fields = {"slug":["name"]}
     list_display = ('name','slug','state')
@@ -19,6 +22,7 @@ class CategoriasAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 class CatedraAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     prepopulated_fields = {"slug":["title"]}
     list_display = ('title','categorias','state')
+    inlines = [SpeakerAdmin]
     resource_class = CatedraResource
 
 admin.site.register(Categorias, CategoriasAdmin)

@@ -20,9 +20,12 @@
 {% endif %}
 
 {% block header %}
-    <div class="row position-relative portada portada--actualidad">
+    <div class="row position-relative portada portada--publicaciones">
         <h1 class="fw-bold lh-sm text-white" href="">{{ detalle.title }}</h1>
         <div class="share mt-4">
+            {% if detalle.pdf %}
+                <a href="{{ detalle.pdf.url }}" target="_blank" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
+            {% endif %}
             <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'actualidades:detalle' detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
             <a class="social__link social__link--size" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'actualidades:detalle' detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
             <a class="social__link social__link--size" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'actualidades:detalle' detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
