@@ -51,9 +51,9 @@
 {% block content %}
     <div class="row">
         {% for actualidad in actualidades|slice:"1:" %}
-        <div class="col-12 col-lg-4 mb-3">
+        <div class="col-12 col-lg-6 col-xxxl-4 mb-3">
             <div class="card">
-                <img src="{{ actualidad.photo.url }}" class="card-img-top" alt="{{ actualidad.title }}">
+                <img src="{{ actualidad.photo.url }}" class="card-img-top img-alto" alt="{{ actualidad.title }}">
                 <div class="card-body">
                     <p>{{ actualidad.date }}</p>
                     <a class="card-title fw-bold card-inicio__title" href="{% url 'actualidades:detalle' actualidad.slug %}">{{ actualidad.title }}</a>

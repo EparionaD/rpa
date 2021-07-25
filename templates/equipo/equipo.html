@@ -50,7 +50,7 @@
                             <h1 class="fw-bold card-equipo__name">{{ equipo.name }}</h1>
                             <a class="card-equipo__data card-equipo__data--email" href="mailto:{{ equipo.email }}">{{ equipo.email }}</a>
                         </div>
-                        <a class="position-absolute translate-middle card-equipo__link" href="{% url 'equipo:detalle' equipo.slug %}"><i class="fas fa-plus card-equipo__icon"></i></a>
+                        <a class="position-absolute translate-middle card-equipo__link" href="{% url 'equipo:detalle' equipo.slug %}#{{ equipo.slug }}"><i class="fas fa-plus card-equipo__icon"></i></a>
                     </div>
                 </div>
             </div>

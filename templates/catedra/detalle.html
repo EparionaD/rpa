@@ -30,10 +30,87 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-12 col-lg-9 mb-3 mb-lg-0">
+        <div class="col-12 col-lg-9 mb-3 mb-lg-0 catedra-detalle">
+            <h2 class="fw-bold">Presentación</h2>
+            <div class="mt-3 mb-5">
+                {{ detalle.description|safe }}
+            </div>
             <div class=" publicacion-contenido rounded">
-                <div class="p-4">
-                    {{ detalle.description|safe }}
+                <h4 class="fw-bold mx-5 pt-5 catedra-detalle__title">I.- Datos</h4>
+                <div class="d-flex px-5 pt-4">
+                    <div class="d-flex flex-column w-50">
+                        <div class="d-flex">
+                            <i class="text-danger far fa-calendar-alt fa-lg"></i>
+                            <div class="ps-3">
+                                <p class="fw-bold">Fecha:</p>
+                                <p>{{ detalle.date }}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="text-danger fas fa-hourglass-half fa-lg"></i>
+                            <div class="ps-3">
+                                <p class="fw-bold">Duración:</p>
+                                <p>{{ detalle.duration }}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="text-danger fas fa-map-marker-alt fa-lg"></i>
+                            <div class="ps-3">
+                                <p class="fw-bold">Modalidad:</p>
+                                <p>{{ detalle.modality }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column w-50 border-start ps-3">
+                        <div class="d-flex">
+                            <i class="text-danger far fa-clock fa-lg"></i>
+                            <div class="ps-3">
+                                <p class="fw-bold">Horario:</p>
+                                <p>{{ detalle.schedule }}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="text-danger fas fa-coins fa-lg"></i>
+                            <div class="ps-3">
+                                <p class="fw-bold">Costo:</p>
+                                <p>{{ detalle.cost }}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="text-danger fas fa-user fa-lg"></i>
+                            <div class="ps-3">
+                                <p class="fw-bold">Dirigido a:</p>
+                                <p>{{ detalle.guided }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex px-5 py-4">
+                    <a class="btn btn-primary catedra-detalle__button" target="_blank"href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}">Más información e inscripciones</a>
+                </div>
+                <div class="d-flex flex-column px-5 py-5 catedra-fondo">
+                    <h4 class="fw-bold catedra-detalle__title">II.- Plan de estudios</h4>
+                    <div class="p-3">
+                        {{ detalle.syllabus|safe }}
+                    </div>
+                </div>
+                <div class="d-flex flex-column px-5 py-5">
+                    <h4 class="fw-bold catedra-detalle__title">III.- Docentes</h4>
+                    <div class="p-3">
+                        {{ detalle.speaker|safe }}
+                    </div>
+                </div>
+                <div class="d-flex flex-column px-5 py-5 catedra-fondo">
+                    <h4 class="fw-bold catedra-detalle__title">IV.- Beneficios</h4>
+                    <div class="p-3">
+                        {{ detalle.profit|safe }}
+                    </div>
+                </div>
+                <div class="d-flex flex-column px-5 py-5">
+                    <h4 class="fw-bold catedra-detalle__title">V.- El enfoque de aprendizaje de Cátedra</h4>
+                    <div class="p-3">
+                        {{ detalle.cathedra|safe }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,6 +131,9 @@
                             <p>{{ detalle.duration }}</p>
                         </div>
                     </div>
+                </div>
+                <div class="d-flex justify-content-center my-4">
+                    <a class="btn btn-primary catedra-detalle__button" target="_blank"href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}">Inscripciones</a>
                 </div>
                 <div class="rounded-bottom publicacion-autor__share">
                     <div class="share d-lg-flex flex-lg-column">

@@ -27,6 +27,8 @@
         {% endfor %}
     {% endblock fondo %}
     {% block main %}espaciado{% endblock main %}
+    
+    {% block id %}id="enlace-desde-inicio"{% endblock id %}
 {% endif %}
 
 {% block header %}
@@ -45,6 +47,7 @@
             <a class="social__link social__link--size" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ publicacion.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' publicacion.slug %}"><i class="fab fa-twitter-square"></i></a>
             <a class="social__link social__link--size" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' publicacion.slug %}"><i class="fab fa-whatsapp"></i></a>
             <a class="social__link social__link--size" target="_blank" onclick="Links('{{ publicacion.id }}','{{ publicacion.categorias }}')" campo="http://www.rpa.pe{% url 'publicaciones:detalle' publicacion.slug %}" id="{{ publicacion.id }}"><i class="fas fa-link"></i></a>
+            <div id="enlace-desde-inicio"></div>
             <div class="alert alert-warning alert-dismissible fade show position-absolute top-100 start-50 translate-middle animate__animated d-none" role="alert" id="{{ publicacion.categorias }}">
                 <strong>Enlace copiado!</strong>
             </div>
@@ -57,7 +60,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center mb-5">
             <ul class="nav nav-pills mb-3 shadow component-tab__ul bg-white" id="pills-tab" role="tablist">
             {% for categoria in categorias %}
                 <li class="nav-item" role="presentation">
@@ -71,9 +74,9 @@
                 <div class="tab-pane fade show active" id="pills-jurisprudencia" role="tabpanel" aria-labelledby="pills-jurisprudencia-tab">
                     <div class="row">
                     {% for juris in jurisprudencia %}
-                        <div class="col-12 col-lg-4">
-                            <div class="card card-inicio">
-                                <img src="{{ juris.photo.url }}" class="card-img-top" alt="{{ juris.title }}">
+                        <div class="col-12 col-lg-6 col-xxxl-4">
+                            <div class="card card-inicio card-alto">
+                                <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
                                 <div class="card-body">
                                     <p class="card-inicio__date">{{ juris.date }}</p>
                                     <a class="card-title fw-bold card-inicio__title" href="{% url 'publicaciones:detalle' juris.slug %}">{{ juris.title }}</a>
@@ -137,8 +140,8 @@
                     <div class="row">
                     {% for juris in boletines %}
                         <div class="col-12 col-lg-4">
-                            <div class="card card-inicio">
-                                <img src="{{ juris.photo.url }}" class="card-img-top" alt="{{ juris.title }}">
+                            <div class="card card-inicio card-alto">
+                                <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
                                 <div class="card-body">
                                     <p class="card-inicio__date">{{ juris.date }}</p>
                                     <a class="card-title fw-bold card-inicio__title" href="{% url 'publicaciones:detalle' juris.slug %}">{{ juris.title }}</a>
@@ -202,8 +205,8 @@
                     <div class="row">
                     {% for juris in articulos %}
                         <div class="col-12 col-lg-4">
-                            <div class="card card-inicio">
-                                <img src="{{ juris.photo.url }}" class="card-img-top" alt="{{ juris.title }}">
+                            <div class="card card-inicio card-alto">
+                                <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
                                 <div class="card-body">
                                     <p class="card-inicio__date">{{ juris.date }}</p>
                                     <a class="card-title fw-bold card-inicio__title" href="{% url 'publicaciones:detalle' juris.slug %}">{{ juris.title }}</a>

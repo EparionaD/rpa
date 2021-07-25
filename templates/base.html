@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css">
 
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/rpa.css' %}">
@@ -83,7 +84,7 @@
         {% block header-detalle %}{% endblock header-detalle %}
             
     </header>
-    <main class="container-fluid {% block main %}{% endblock main %}">
+    <main class="container-fluid {% block main %}{% endblock main %}" {% block id %}{% endblock id %}>
         {% block content %}{% endblock content %}
     </main>
     <footer class="container-fluid pie-pagina">

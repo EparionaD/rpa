@@ -150,3 +150,44 @@ function Links(elemento, elemento1){
     agregarAlerta(elemento1)
     setTimeout(quitarAlerta,2000,elemento1)
 }
+
+window.onload = function(){
+    let scroll = document.documentElement.scrollTop || document.body.scrollTop
+
+    if(scroll > 50){
+        boton.removeAttribute('onclick','agregarColor()')
+        document.getElementById("navigation").classList.add('menu--color','menu--des');
+
+        quitarActive()
+        agregarsocialColor()
+
+    }
+
+    const url = window.location.hash
+    if(url){
+        catedraDetalle(url)
+    }
+}
+
+function catedraDetalle(url){
+    console.log(url)
+    window.scrollBy(0,-150)
+    if(url === '#pills-articulos-tab'){
+        document.getElementById('pills-articulos-tab').classList.add('active')
+        document.getElementById('pills-boletines-tab').classList.remove('active')
+        document.getElementById('pills-jurisprudencia-tab').classList.remove('active')
+
+        document.getElementById('pills-articulos').classList.add('active')
+        document.getElementById('pills-boletines').classList.remove('active')
+        document.getElementById('pills-jurisprudencia').classList.remove('active')
+    }else if(url === '#pills-boletines-tab'){
+        document.getElementById('pills-articulos-tab').classList.remove('active')
+        document.getElementById('pills-boletines-tab').classList.add('active')
+        document.getElementById('pills-jurisprudencia-tab').classList.remove('active')
+
+        document.getElementById('pills-articulos').classList.remove('active')
+        document.getElementById('pills-boletines').classList.add('active')
+        document.getElementById('pills-jurisprudencia').classList.remove('active')
+    }
+
+}
