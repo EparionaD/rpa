@@ -153,6 +153,7 @@ function Links(elemento, elemento1){
 
 window.onload = function(){
     let scroll = document.documentElement.scrollTop || document.body.scrollTop
+    console.log(scroll)
 
     if(scroll > 50){
         boton.removeAttribute('onclick','agregarColor()')
@@ -162,7 +163,6 @@ window.onload = function(){
         agregarsocialColor()
 
     }
-
     const url = window.location.hash
     if(url){
         catedraDetalle(url)
@@ -171,7 +171,11 @@ window.onload = function(){
 
 function catedraDetalle(url){
     console.log(url)
-    window.scrollBy(0,-150)
+    // window.scrollBy(0,-150)
+    window.scrollTo(0,650)
+    // window.setTimeout(function(){
+    //     window.scrollTo(0,650)
+    // },0)
     if(url === '#pills-articulos-tab'){
         document.getElementById('pills-articulos-tab').classList.add('active')
         document.getElementById('pills-boletines-tab').classList.remove('active')

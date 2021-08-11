@@ -66,27 +66,27 @@
                             <div class="col-12 d-flex flex-column flex-lg-row mb-5">
                                 {% for principal in cursos|slice:":1" %}
                                 <div class="card">
-                                    <div class="row g-0 catedra__card">
+                                    <div class="row g-0">
                                         <div class="col-md-7">
-                                            <img class="catedra__img h-100 rounded-start" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
+                                            <img class="catedra__img catedra__card h-100" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
                                         </div>
                                         <div class="col-md-5">
                                             <div class="card-body p-4 p-xxl-5 h-100 d-flex flex-column justify-content-center">
                                                 <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
                                                 <div class="d-flex flex-column">
                                                     <div class="mb-0 catedra__summary">{{ principal.summary|safe }}</div>
-                                                    <div class="d-flex my-4">
+                                                    <div class="d-flex my-4 flex-md-column">
                                                         <div class="d-flex pe-5">
-                                                            <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
-                                                            <div>
-                                                                <span>Fecha</span>
+                                                            <i class="text-danger align-self-center pe-3 far fa-calendar-alt catedra__icon"></i>
+                                                            <div class="calendario-f">
+                                                                <span class="fw-bold">Fecha</span>
                                                                 <p>{{ principal.date }}</p>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex">
-                                                            <i class="text-danger align-self-center pe-3 far fa-clock fa-2x"></i>
-                                                            <div>
-                                                                <span>Duración</span>
+                                                            <i class="text-danger align-self-center pe-3 far fa-clock catedra__icon"></i>
+                                                            <div class="calendario-f">
+                                                                <span class="fw-bold">Duración</span>
                                                                 <p>{{ principal.duration }}</p>
                                                             </div>
                                                         </div>
@@ -114,18 +114,18 @@
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row my-4 my-lg-4 my-xl-4">
-                                        <div class="w-100 d-flex">
-                                            <div class="d-flex pe-4">
-                                                <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
-                                                <div>
-                                                    <span>Fecha</span>
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <i class="text-danger align-self-center pe-3 far fa-calendar-alt catedra__icon"></i>
+                                                <div class="calendario-f">
+                                                    <span class="fw-bold">Fecha</span>
                                                     <p>{{ secundario.date }}</p>
                                                 </div>
                                             </div>
                                             <div class="d-flex">
-                                                <i class="text-danger align-self-center pe-3 far fa-clock fa-2x"></i>
-                                                <div>
-                                                    <span>Duración</span>
+                                                <i class="text-danger align-self-center pe-3 far fa-clock catedra__icon"></i>
+                                                <div class="calendario-f">
+                                                    <span class="fw-bold">Duración</span>
                                                     <p>{{ secundario.duration }}</p>
                                                 </div>
                                             </div>
@@ -151,7 +151,7 @@
                             <div class="col-12 d-flex flex-column flex-lg-row mb-5">
                                 {% for principal in seminarios|slice:":1" %}
                                 <div class="card">
-                                    <div class="row g-0 catedra__card">
+                                    <div class="row g-0">
                                         <div class="col-md-7">
                                             <img class="catedra__img h-100 rounded-start" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
                                         </div>
@@ -160,18 +160,18 @@
                                                 <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
                                                 <div class="d-flex flex-column">
                                                     <div class="mb-0 catedra__summary">{{ principal.summary|safe }}</div>
-                                                    <div class="d-flex my-4">
+                                                    <div class="d-flex my-4 flex-md-column">
                                                         <div class="d-flex pe-5">
-                                                            <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
-                                                            <div>
-                                                                <span>Fecha</span>
+                                                            <i class="text-danger align-self-center pe-3 far fa-calendar-alt catedra__icon"></i>
+                                                            <div class="calendario-f">
+                                                                <span class="fw-bold">Fecha</span>
                                                                 <p>{{ principal.date }}</p>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex">
-                                                            <i class="text-danger align-self-center pe-3 far fa-clock fa-2x"></i>
-                                                            <div>
-                                                                <span>Duración</span>
+                                                            <i class="text-danger align-self-center pe-3 far fa-clock catedra__icon"></i>
+                                                            <div class="calendario-f">
+                                                                <span class="fw-bold">Duración</span>
                                                                 <p>{{ principal.duration }}</p>
                                                             </div>
                                                         </div>
@@ -199,18 +199,18 @@
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row my-4 my-lg-4 my-xl-4">
-                                        <div class="w-100 d-flex">
-                                            <div class="d-flex pe-4">
-                                                <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
-                                                <div>
-                                                    <span>Fecha</span>
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <i class="text-danger align-self-center pe-3 far fa-calendar-alt catedra__icon"></i>
+                                                <div class="calendario-f">
+                                                    <span class="fw-bold">Fecha</span>
                                                     <p>{{ secundario.date }}</p>
                                                 </div>
                                             </div>
                                             <div class="d-flex">
-                                                <i class="text-danger align-self-center pe-3 far fa-clock fa-2x"></i>
-                                                <div>
-                                                    <span>Duración</span>
+                                                <i class="text-danger align-self-center pe-3 far fa-clock catedra__icon"></i>
+                                                <div class="calendario-f">
+                                                    <span class="fw-bold">Duración</span>
                                                     <p>{{ secundario.duration }}</p>
                                                 </div>
                                             </div>
@@ -236,7 +236,7 @@
                             <div class="col-12 d-flex flex-column flex-lg-row mb-5">
                                 {% for principal in conversatorios|slice:":1" %}
                                 <div class="card">
-                                    <div class="row g-0 catedra__card">
+                                    <div class="row g-0">
                                         <div class="col-md-7">
                                             <img class="catedra__img h-100 rounded-start" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
                                         </div>
@@ -245,18 +245,18 @@
                                                 <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
                                                 <div class="d-flex flex-column">
                                                     <div class="mb-0 catedra__summary">{{ principal.summary|safe }}</div>
-                                                    <div class="d-flex my-4">
+                                                    <div class="d-flex my-4 flex-md-column">
                                                         <div class="d-flex pe-5">
-                                                            <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
-                                                            <div>
-                                                                <span>Fecha</span>
+                                                            <i class="text-danger align-self-center pe-3 far fa-calendar-alt catedra__icon"></i>
+                                                            <div class="calendario-f">
+                                                                <span class="fw-bold">Fecha</span>
                                                                 <p>{{ principal.date }}</p>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex">
-                                                            <i class="text-danger align-self-center pe-3 far fa-clock fa-2x"></i>
-                                                            <div>
-                                                                <span>Duración</span>
+                                                            <i class="text-danger align-self-center pe-3 far fa-clock catedra__icon"></i>
+                                                            <div class="calendario-f">
+                                                                <span class="fw-bold">Duración</span>
                                                                 <p>{{ principal.duration }}</p>
                                                             </div>
                                                         </div>
@@ -284,18 +284,18 @@
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
                                     <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1>
                                     <div class="d-flex flex-column flex-lg-row my-4 my-lg-4 my-xl-4">
-                                        <div class="w-100 d-flex">
-                                            <div class="d-flex pe-4">
-                                                <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
-                                                <div>
-                                                    <span>Fecha</span>
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <i class="text-danger align-self-center pe-3 far fa-calendar-alt catedra__icon"></i>
+                                                <div class="calendario-f">
+                                                    <span class="fw-bold">Fecha</span>
                                                     <p>{{ secundario.date }}</p>
                                                 </div>
                                             </div>
                                             <div class="d-flex">
-                                                <i class="text-danger align-self-center pe-3 far fa-clock fa-2x"></i>
-                                                <div>
-                                                    <span>Duración</span>
+                                                <i class="text-danger align-self-center pe-3 far fa-clock catedra__icon"></i>
+                                                <div class="calendario-f">
+                                                    <span class="fw-bold">Duración</span>
                                                     <p>{{ secundario.duration }}</p>
                                                 </div>
                                             </div>

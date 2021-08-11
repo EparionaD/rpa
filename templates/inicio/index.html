@@ -51,7 +51,7 @@
 
 
 {% block content %}
-    <section class="row firma-inicio">
+    {% comment %} <section class="row firma-inicio">
         <div class="col-12 mb-4 firma-inicio__containertext">
             <h1 class="fw-bold firma-inicio__title">La Firma</h1>
             <p class="firma-inicio__text">El Estudio Pariona Abogados es una firma de abogados especializada en Derecho Penal que brinda servicios legales de excelencia. </p>
@@ -64,7 +64,7 @@
         <div class="d-flex justify-content-center">
             <a class="btn btn-danger firma-inicio__buttom" href="{% url 'index:firma' %}" role="button">Conoce más</a>
         </div>
-        {% comment %} <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-5">
             <img loading="lazy" class="img-fluid firma-inicio__img shadow" src="{% static 'img/index/index-firma.jpg' %}" alt="Firma">
         </div>
         <div class="col-12 col-lg-7 firma-inicio__containertext">
@@ -73,57 +73,63 @@
             <p class="firma-inicio__text">Uno desus principales ámbitos de acción es el Derecho Penal Económico y de la Empresa, así como el Corporate Defense y Compliance. </p>
             <p class="firma-inicio__text">Gracias a nuestro equipo de expertos, satisfacemos las necesidades de nuestros clientes con eficacia.</p>
             <a class="btn btn-danger firma-inicio__buttom" href="{% url 'index:firma' %}" role="button">Conoce más</a>
-        </div> {% endcomment %}
-    </section>
+        </div>
+    </section> {% endcomment %}
     <section class="row firma-especialidades">
         <h1 class="firma-especialidades__title fw-bold">Especialidades</h1>
         <p class="firma-especialidades__text">Nuestro estudio cuenta con una basta experiencia en las siguientes especialidades de servicios legales:</p>
         <div class="firma-especialidades__container">
             <div class="row firma-especialidades__items">
                 <div class="col-6 col-lg-4 items-especialidades">
-                    <a class="items-especialidades__link" href="">
+                    <a class="items-especialidades__link" href="{% url 'index:especialidades' %}">
                         <div class="items-especialidades__container">
-                            <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/derecho-penal-empresarial.jpg' %}" alt="derecho-penal-empresarial">
+                            {% comment %} <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/derecho-penal-empresarial.jpg' %}" alt="derecho-penal-empresarial"> {% endcomment %}
+                            <img class="rounded-circle espec-detalle__img icon-especialidad" src="{% static 'img/especialidades/icon-derecho-penal-empresarial.png' %}" alt="derecho-penal-empresarial">
                             <p class="items-especialidades__text fw-bold">Derecho penal empresarial</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-lg-4 items-especialidades">
-                    <a class="items-especialidades__link" href="">
+                    <a class="items-especialidades__link" href="{% url 'index:especialidades' %}">
                         <div class="items-especialidades__container">
-                            <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/litigios-penales.jpg' %}" alt="litigios-penales">
+                            {% comment %} <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/litigios-penales.jpg' %}" alt="litigios-penales"> {% endcomment %}
+                            <img class="rounded-circle espec-detalle__img icon-especialidad" src="{% static 'img/especialidades/icon-litigios-penales.png' %}" alt="litigios-penales">
                             <p class="items-especialidades__text fw-bold">Litigios penales y solución de controversias</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-lg-4 items-especialidades">
-                    <a class="items-especialidades__link" href="">
+                    <a class="items-especialidades__link" href="{% url 'index:especialidades' %}">
                         <div class="items-especialidades__container">
-                            <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/asesoria-penal-empresarial.jpg' %}" alt="asesoria-penal-empresarial">
+                            {% comment %} <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/asesoria-penal-empresarial.jpg' %}" alt="asesoria-penal-empresarial"> {% endcomment %}
+                            <img class="rounded-circle espec-detalle__img icon-especialidad" src="{% static 'img/especialidades/icon-asesoria-penal-empresarial.png' %}" alt="asesoria-penal-empresarial">
                             <p class="items-especialidades__text fw-bold">Asesoría penal empresarial</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-lg-4 items-especialidades">
-                    <a class="items-especialidades__link" href="">
+                    <a class="items-especialidades__link" href="{% url 'index:especialidades' %}">
                         <div class="items-especialidades__container">
-                            <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/derecho-penal-administracion-publica.jpg' %}" alt="derecho-penal-administracion-publica">
+                            {% comment %} <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/derecho-penal-administracion-publica.jpg' %}" alt="derecho-penal-administracion-publica"> {% endcomment %}
+                            <img class="rounded-circle espec-detalle__img icon-especialidad" src="{% static 'img/especialidades/icon-derecho-penal-administracion-publica.png' %}" alt="derecho-penal-administracion-publica">
                             <p class="items-especialidades__text fw-bold">Derecho penal de la administración pública</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-lg-4 items-especialidades">
-                    <a class="items-especialidades__link" href="">
+                    <a class="items-especialidades__link" href="{% url 'index:especialidades' %}">
                         <div class="items-especialidades__container">
-                            <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/corporate-compliance.jpg' %}" alt="corporate-compliance">
+                            {% comment %} <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/corporate-compliance.jpg' %}" alt="corporate-compliance"> {% endcomment %}
+                            <img class="rounded-circle espec-detalle__img icon-especialidad" src="{% static 'img/especialidades/icon-corporate-compliance.png' %}" alt="corporate-compliance">
                             <p class="items-especialidades__text fw-bold">Corporate compliance</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-6 col-lg-4 items-especialidades">
-                    <a class="items-especialidades__link" href="">
+                    <a class="items-especialidades__link" href="{% url 'index:especialidades' %}">
                         <div class="items-especialidades__container">
-                            <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/consultoria.jpg' %}" alt="consultoria">
+                            {% comment %} <img loading="lazy" class="img-fluid rounded-circle items-especialidades__img" src="{% static 'img/index/consultoria.jpg' %}" alt="consultoria"> {% endcomment %}
+                            <img class="rounded-circle espec-detalle__img icon-especialidad" src="{% static 'img/especialidades/icon-consultoria.png' %}" alt="consultoria">
                             <p class="items-especialidades__text fw-bold">Consultoría</p>
                         </div>
                     </a>
@@ -134,13 +140,26 @@
     <section class="row publicacion-inicio" id="funciona-solo-index">
         <h1 class="publicacion-inicio__title fw-bold">Publicaciones</h1>
         <div class="row publicacion-inicio__container">
-            <div class="col-12 col-lg-12 publicacion-inicio__group my-4 d-flex justify-content-center">
+            {% comment %} <div class="col-12 col-lg-12 publicacion-inicio__group my-4 d-flex justify-content-center">
                 <ul class="nav nav-pills mb-3 shadow component-tab__ul bg-white">
                 {% for categoria in categorias %}
                     <li class="nav-item" role="presentation">
                         <a class="nav-link fw-bold publicacion-inicio__button {% if forloop.first %}active{% endif %}" aria-selected="true" href="{% url 'publicaciones:publicaciones' %}#pills-{{ categoria.slug }}-tab">{{ categoria.name }}</a>
                     </li>
                 {% endfor %}
+                </ul>
+            </div> {% endcomment %}
+            <div class="col-12 col-lg-12 publicacion-inicio__group my-4 d-flex justify-content-center">
+                <ul class="nav nav-pills mb-3 shadow component-tab__ul bg-white" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link fw-bold publicacion-inicio__button active" href="{% url 'publicaciones:publicaciones' %}#pills-jurisprudencia-tab">Jurisprudencia</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link fw-bold publicacion-inicio__button button-publicacion" href="{% url 'publicaciones:publicaciones' %}#pills-boletines-tab">Boletines</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link fw-bold publicacion-inicio__button button-publicacion" href="{% url 'publicaciones:publicaciones' %}#pills-articulos-tab">Artículos</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-12 col-lg-12 publicacion-inicio__group">
@@ -153,7 +172,7 @@
                                     <img src="{{ principal.photo.url }}" class="card-img-top" alt="{{ principal.title }}">
                                     <div class="card-body">
                                         <p class="card-inicio__date">{{ principal.date }}</p>
-                                        <a class="card-title fw-bold card-inicio__title" href="{% url 'publicaciones:detalle' principal.slug %}">{{ principal.title }}</a>
+                                        <a class="card-title fw-bold card-inicio__title card-inicio__title--principal" href="{% url 'publicaciones:detalle' principal.slug %}">{{ principal.title }}</a>
                                         <p class="fw-bold card-inicio__author">Por: {{ principal.author.name }} {{ principal.author.last_name }}</p>
                                         <div class="card-text">{{ principal.summary|safe }}</div>
                                         <div class="position-relative share">
@@ -200,7 +219,7 @@
             </div>
         </div>
     </section>
-    <section class="row actualidad-inicio">
+    {% comment %} <section class="row actualidad-inicio">
         <h1 class="actualidad-inicio__title fw-bold mb-5">Actualidad</h1>
         <div class="row publicacion-inicio__container">
             <div class="col-12 col-lg-12 publicacion-inicio__group">
@@ -211,7 +230,7 @@
                             <img src="{{ principal.photo.url }}" class="card-img-top" alt="{{ principal.title }}">
                             <div class="card-body">
                                 <p class="card-inicio__date">{{ principal.date }}</p>
-                                <a class="card-title fw-bold card-inicio__title" href="{% url 'actualidades:detalle' principal.slug %}">{{ principal.title }}</a>
+                                <a class="card-title fw-bold card-inicio__title card-inicio__title--principal" href="{% url 'actualidades:detalle' principal.slug %}">{{ principal.title }}</a>
                                 <p class="fw-bold card-inicio__author">Por: {{ principal.author.name }} {{ principal.author.last_name }}</p>
                                 <div class="card-text">{{ principal.summary|safe }}</div>
                                 <div class="position-relative share">
@@ -253,5 +272,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
 {% endblock content %}

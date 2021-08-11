@@ -88,12 +88,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex px-5 py-5">
-                    <a class="btn btn-primary catedra-detalle__button" target="_blank"href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}">Más información e inscripciones</a>
+                <div class="d-flex flex-column flex-xl-row px-5 py-5">
+                    <a class="btn btn-primary catedra-detalle__button" target="_blank" href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}">Más información e inscripciones</a>
+                    <div class="d-flex justify-content-center align-items-center mt-4 mt-xl-0 ms-0 ms-xl-4">
+                        <a class="btn btn-primary" target="_blank" href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}"><i class="fab fa-whatsapp"></i> 999788321</a>
+                    </div>
                 </div>
             </div>
             {% if detalle.syllabus %}
-            <div class="publicacion-contenido rounded mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded mb-3">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Plan de estudios</h2>
                     <div class="p-3">
@@ -102,7 +105,7 @@
                 </div>
             </div>    
             {% endif %}
-            <div class="publicacion-contenido rounded mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded mb-3">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Docentes</h2>
                     {% for speaker in speakers %}
@@ -121,7 +124,7 @@
                 </div>
             </div>
             {% if detalle.profit %}
-            <div class="publicacion-contenido rounded mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded mb-3">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Beneficios</h2>
                     <div class="p-3">
@@ -131,7 +134,7 @@
             </div>
             {% endif %}
             {% if detalle.cathedra %}
-            <div class="publicacion-contenido rounded">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">El enfoque de aprendizaje de Cátedra</h2>
                     <div class="p-3">
@@ -143,7 +146,7 @@
         </div>
         <div class="col-12 col-lg-3">
             <div class="publicacion-autor rounded">
-                <div class="publicacion-autor__card ps-5">
+                <div class="publicacion-autor__card">
                     <div class="d-flex">
                         <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
                         <div>
