@@ -96,7 +96,7 @@
                 </div>
             </div>
             {% if detalle.syllabus %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Plan de estudios</h2>
                     <div class="p-3">
@@ -105,7 +105,7 @@
                 </div>
             </div>    
             {% endif %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Docentes</h2>
                     {% for speaker in speakers %}
@@ -124,7 +124,7 @@
                 </div>
             </div>
             {% if detalle.profit %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Beneficios</h2>
                     <div class="p-3">
@@ -134,7 +134,7 @@
             </div>
             {% endif %}
             {% if detalle.cathedra %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">El enfoque de aprendizaje de Cátedra</h2>
                     <div class="p-3">
@@ -147,14 +147,14 @@
         <div class="col-12 col-lg-3">
             <div class="publicacion-autor rounded">
                 <div class="publicacion-autor__card">
-                    <div class="d-flex">
+                    <div class="d-flex ps-0 ps-lg-2">
                         <i class="text-danger align-self-center pe-3 far fa-calendar-alt fa-2x"></i>
                         <div>
                             <span>Fecha</span>
                             <p>{{ detalle.date }}</p>
                         </div>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex ps-0 ps-lg-2">
                         <i class="text-danger align-self-center pe-3 far fa-clock fa-2x"></i>
                         <div>
                             <span>Duración</span>

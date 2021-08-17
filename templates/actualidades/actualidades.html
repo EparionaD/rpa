@@ -59,11 +59,14 @@
         {% for actualidad in actualidades|slice:"1:" %}
         <div class="col-12 col-lg-6 col-xxxl-4 mb-3">
             <div class="card">
-                <img src="{{ actualidad.photo.url }}" class="card-img-top img-alto" alt="{{ actualidad.title }}">
+                <a class="card-title fw-bold card-inicio__title" href="{% url 'actualidades:detalle' actualidad.slug %}">
+                    <img src="{{ actualidad.photo.url }}" class="card-img-top img-alto" alt="{{ actualidad.title }}">
+                </a>
+                {% comment %} <img src="{{ actualidad.photo.url }}" class="card-img-top img-alto" alt="{{ actualidad.title }}"> {% endcomment %}
                 <div class="card-body">
                     <p>{{ actualidad.date }}</p>
                     <a class="card-title fw-bold card-inicio__title" href="{% url 'actualidades:detalle' actualidad.slug %}">{{ actualidad.title }}</a>
-                    <div class="card-text">{{ actualidad.summary|safe }}</div>
+                    {% comment %} <div class="card-text">{{ actualidad.summary|safe }}</div> {% endcomment %}
                     <div class="share share--actualidad mt-3 d-flex flex-column flex-xl-row justify-content-xl-between">
                         {% if actualidad.pdf %}
                             <a href="{{ actualidad.pdf.url }}" target="_blank" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>

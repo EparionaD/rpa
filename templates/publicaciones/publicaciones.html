@@ -76,12 +76,14 @@
                     {% for juris in jurisprudencia %}
                         <div class="col-12 col-md-6 col-xxxl-4">
                             <div class="card card-inicio card-alto">
-                                <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
+                                <a href="{% url 'publicaciones:detalle' juris.slug %}">
+                                    <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
+                                </a>
                                 <div class="card-body">
                                     <p class="card-inicio__date">{{ juris.date }}</p>
                                     <a class="card-title fw-bold card-inicio__title" href="{% url 'publicaciones:detalle' juris.slug %}">{{ juris.title }}</a>
                                     <p class="fw-bold card-inicio__author">Por: {{ juris.author.name }} {{ juris.author.last_name }}</p>
-                                    <div class="card-text">{{ juris.summary|safe }}</div>
+                                    {% comment %} <div class="card-text">{{ juris.summary|safe }}</div> {% endcomment %}
                                     <div class="share d-flex flex-column flex-xl-row justify-content-xl-between mt-3 mt-xl-0">
                                         <a href="{{ juris.pdf.url }}" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
                                         <div class="mt-3 mt-xl-0">
@@ -143,12 +145,14 @@
                     {% for juris in boletines %}
                         <div class="col-12 col-md-6 col-xxxl-4">
                             <div class="card card-inicio card-alto">
-                                <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
+                                <a href="{% url 'publicaciones:detalle' juris.slug %}">
+                                    <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
+                                </a>
                                 <div class="card-body">
                                     <p class="card-inicio__date">{{ juris.date }}</p>
                                     <a class="card-title fw-bold card-inicio__title" href="{% url 'publicaciones:detalle' juris.slug %}">{{ juris.title }}</a>
                                     <p class="fw-bold card-inicio__author">Por: {{ juris.author.name }} {{ juris.author.last_name }}</p>
-                                    <div class="card-text">{{ juris.summary|safe }}</div>
+                                    {% comment %} <div class="card-text">{{ juris.summary|safe }}</div> {% endcomment %}
                                     <div class="share d-flex flex-column flex-xl-row justify-content-xl-between mt-3 mt-xl-0">
                                         <a href="{{ juris.pdf.url }}" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
                                         <div class="mt-3 mt-xl-0">
@@ -210,12 +214,14 @@
                     {% for juris in articulos %}
                         <div class="col-12 col-md-6 col-xxxl-4">
                             <div class="card card-inicio card-alto">
-                                <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
+                                <a href="{% url 'publicaciones:detalle' juris.slug %}">
+                                    <img src="{{ juris.photo.url }}" class="card-img-top img-alto" alt="{{ juris.title }}">
+                                </a>
                                 <div class="card-body">
                                     <p class="card-inicio__date">{{ juris.date }}</p>
                                     <a class="card-title fw-bold card-inicio__title" href="{% url 'publicaciones:detalle' juris.slug %}">{{ juris.title }}</a>
                                     <p class="fw-bold card-inicio__author">Por: {{ juris.author.name }} {{ juris.author.last_name }}</p>
-                                    <div class="card-text">{{ juris.summary|safe }}</div>
+                                    {% comment %} <div class="card-text">{{ juris.summary|safe }}</div> {% endcomment %}
                                     <div class="share d-flex flex-column flex-xl-row justify-content-xl-between mt-3 mt-xl-0">
                                         <a href="{{ juris.pdf.url }}" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
                                         <div class="mt-3 mt-xl-0">

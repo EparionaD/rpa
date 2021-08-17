@@ -442,22 +442,22 @@
 
 @media only screen and (min-width: 992px) {
   .card-alto {
-    height: 672px;
+    height: 524px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .card-alto {
-    height: 645px;
+    height: 473px;
   }
 }
 @media only screen and (min-width: 1400px) {
   .card-alto {
-    height: 645px;
+    height: 495px;
   }
 }
 @media only screen and (min-width: 1400px) {
   .card-alto {
-    height: 665px;
+    height: 518px;
   }
 }
 
@@ -475,6 +475,18 @@
 .icon-especialidad {
   background-color: #EAEAEA;
   border: 4px solid white;
+}
+
+.border-catedra {
+  border: 2px solid white;
+}
+
+.titulo-catedra {
+  font-size: 2.8rem;
+}
+
+.descripcion-catedra {
+  font-size: 1.3rem;
 }
 
 h1, h2, h3, h4, h5, a {
@@ -804,7 +816,7 @@ p, div {
 
 /* Fin de Index */
 .firma-especialidades {
-  background-image: linear-gradient(to right top, #ababab, #bababa, #cacaca, #d9d9d9, #e9e9e9, #ebebeb, #eeeeee, #f0f0f0, #e5e5e5, #dadada, #d0d0d0, #c5c5c5);
+  background-color: #ababab;
   padding-top: 10rem;
   padding-bottom: 2rem;
   padding-left: 0.5rem;
@@ -1238,16 +1250,6 @@ p, div {
 .pie-pagina__logo {
   height: 80px;
 }
-@media only screen and (min-width: 992px) {
-  .pie-pagina__menu {
-    width: 40%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .pie-pagina__menu {
-    width: 35%;
-  }
-}
 .pie-pagina__office {
   color: white;
   margin-bottom: 0;
@@ -1446,7 +1448,7 @@ p, div {
   }
 }
 .valores__container {
-  background-color: #D42C30;
+  background-color: #ababab;
   height: 100%;
 }
 @media only screen and (min-width: 1800px) {
@@ -1513,7 +1515,7 @@ p, div {
 }
 
 .espec-detalle__back {
-  background-color: #D42C30;
+  background-color: #ababab;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   height: 95px;
@@ -1874,9 +1876,14 @@ p, div {
 .contacto__street {
   background-color: #f7f7f7;
   padding: 2rem 2rem;
-  border-bottom: 3px solid #9B070B;
+  border-bottom: 3px solid #ababab;
 }
 @media only screen and (min-width: 992px) {
+  .contacto__street {
+    padding: 1.5rem 3rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
   .contacto__street {
     padding: 3rem 6rem;
   }
