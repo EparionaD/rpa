@@ -38,7 +38,7 @@
             <div class="mt-3 mb-5">
                 {{ detalle.description|safe }}
             </div>
-            <div class="publicacion-contenido rounded mb-3">
+            <div class="publicacion-contenido rounded mb-3 heredar">
                 <h2 class="fw-bold mx-5 pt-5">Datos</h2>
                 <div class="d-flex px-5 pt-4">
                     <div class="d-flex flex-column w-50">
@@ -96,7 +96,7 @@
                 </div>
             </div>
             {% if detalle.syllabus %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Plan de estudios</h2>
                     <div class="p-3">
@@ -105,7 +105,7 @@
                 </div>
             </div>    
             {% endif %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Docentes</h2>
                     {% for speaker in speakers %}
@@ -124,7 +124,7 @@
                 </div>
             </div>
             {% if detalle.profit %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Beneficios</h2>
                     <div class="p-3">
@@ -134,7 +134,7 @@
             </div>
             {% endif %}
             {% if detalle.cathedra %}
-            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra">
+            <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">El enfoque de aprendizaje de Cátedra</h2>
                     <div class="p-3">

@@ -68,11 +68,14 @@
                                 <div class="card">
                                     <div class="row g-0">
                                         <div class="col-md-7">
-                                            <img class="catedra__img catedra__card h-100" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
+                                            <a href="{% url 'catedra:detalle' principal.slug %}">
+                                                <img class="catedra__img catedra__card h-100" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
+                                            </a>
                                         </div>
                                         <div class="col-md-5">
                                             <div class="card-body p-4 p-xxl-5 h-100 d-flex flex-column justify-content-center">
-                                                <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
+                                                <a class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title" href="{% url 'catedra:detalle' principal.slug %}">{{ principal.title }}</a>
+                                                {% comment %} <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1> {% endcomment %}
                                                 <div class="d-flex flex-column">
                                                     <div class="mb-0 catedra__summary">{{ principal.summary|safe }}</div>
                                                     <div class="d-flex my-4 flex-md-column">
@@ -109,10 +112,13 @@
                         </div>
                         <div class="row espaciado-catedra espaciado-catedra--catedra">
                         {% for secundario in cursos|slice:"1:" %}
-                            <div class="col-12 col-md-6 col-xxxl-4 my-5 card-alto">
-                                <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}">
+                            <div class="col-12 col-md-6 col-xxxl-4 my-5">
+                                <a href="{% url 'catedra:detalle' secundario.slug %}">
+                                    <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}">
+                                </a>
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
-                                    <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1>
+                                    {% comment %} <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1> {% endcomment %}
+                                    <a class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam" href="{% url 'catedra:detalle' secundario.slug %}">{{ secundario.title }}</a>
                                     <div class="d-flex flex-column flex-lg-row my-4 my-lg-4 my-xl-4">
                                         <div class="w-100 d-flex justify-content-between">
                                             <div class="d-flex">
@@ -153,11 +159,15 @@
                                 <div class="card">
                                     <div class="row g-0">
                                         <div class="col-md-7">
-                                            <img class="catedra__img h-100 rounded-start" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
+                                            {% comment %} <img class="catedra__img h-100 rounded-start" src="{{ principal.photo.url }}" alt="{{ principal.title }}"> {% endcomment %}
+                                            <a href="{% url 'catedra:detalle' principal.slug %}">
+                                                <img class="catedra__img catedra__card h-100" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
+                                            </a>
                                         </div>
                                         <div class="col-md-5">
                                             <div class="card-body p-4 p-xxl-5 h-100 d-flex flex-column justify-content-center">
-                                                <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
+                                                {% comment %} <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1> {% endcomment %}
+                                                <a class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title" href="{% url 'catedra:detalle' principal.slug %}">{{ principal.title }}</a>
                                                 <div class="d-flex flex-column">
                                                     <div class="mb-0 catedra__summary">{{ principal.summary|safe }}</div>
                                                     <div class="d-flex my-4 flex-md-column">
@@ -195,9 +205,13 @@
                         <div class="row espaciado-catedra espaciado-catedra--catedra">
                         {% for secundario in seminarios|slice:"1:" %}
                             <div class="col-12 col-md-6 col-xxxl-4 my-5 card-alto">
-                                <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}">
+                                <a href="{% url 'catedra:detalle' secundario.slug %}">
+                                    <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}">
+                                </a>
+                                {% comment %} <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}"> {% endcomment %}
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
-                                    <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1>
+                                    {% comment %} <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1> {% endcomment %}
+                                    <a class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam" href="{% url 'catedra:detalle' secundario.slug %}">{{ secundario.title }}</a>
                                     <div class="d-flex flex-column flex-lg-row my-4 my-lg-4 my-xl-4">
                                         <div class="w-100 d-flex justify-content-between">
                                             <div class="d-flex">
@@ -238,11 +252,15 @@
                                 <div class="card">
                                     <div class="row g-0">
                                         <div class="col-md-7">
-                                            <img class="catedra__img h-100 rounded-start" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
+                                            {% comment %} <img class="catedra__img h-100 rounded-start" src="{{ principal.photo.url }}" alt="{{ principal.title }}"> {% endcomment %}
+                                            <a href="{% url 'catedra:detalle' principal.slug %}">
+                                                <img class="catedra__img catedra__card h-100" src="{{ principal.photo.url }}" alt="{{ principal.title }}">
+                                            </a>
                                         </div>
                                         <div class="col-md-5">
                                             <div class="card-body p-4 p-xxl-5 h-100 d-flex flex-column justify-content-center">
-                                                <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1>
+                                                {% comment %} <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title">{{ principal.title }}</h1> {% endcomment %}
+                                                <a class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title" href="{% url 'catedra:detalle' principal.slug %}">{{ principal.title }}</a>
                                                 <div class="d-flex flex-column">
                                                     <div class="mb-0 catedra__summary">{{ principal.summary|safe }}</div>
                                                     <div class="d-flex my-4 flex-md-column">
@@ -280,9 +298,13 @@
                         <div class="row espaciado-catedra espaciado-catedra--catedra">
                         {% for secundario in conversatorios|slice:"1:" %}
                             <div class="col-12 col-md-6 col-xxxl-4 my-5 card-alto">
-                                <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}">
+                                <a href="{% url 'catedra:detalle' secundario.slug %}">
+                                    <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}">
+                                </a>
+                                {% comment %} <img class="img-fluid img-alto catedra__img catedra__img--thumbnail" src="{{ secundario.photo.url }}" alt="{{ secundario.title }}"> {% endcomment %}
                                 <div class="bg-white p-4 catedra__container catedra__container--thumbnail">
-                                    <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1>
+                                    {% comment %} <h1 class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam">{{ secundario.title }}</h1> {% endcomment %}
+                                    <a class="mb-4 mb-lg-2 mb-xl-4 fw-bold catedra__title catedra__title--tam" href="{% url 'catedra:detalle' secundario.slug %}">{{ secundario.title }}</a>
                                     <div class="d-flex flex-column flex-lg-row my-4 my-lg-4 my-xl-4">
                                         <div class="w-100 d-flex justify-content-between">
                                             <div class="d-flex">

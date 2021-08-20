@@ -461,6 +461,27 @@
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .card-alto-catedra {
+    height: 545px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-alto-catedra {
+    height: 522px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .card-alto-catedra {
+    height: 525px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .card-alto-catedra {
+    height: 560px;
+  }
+}
+
 .calendario-f {
   font-size: 0.9rem;
 }
@@ -487,6 +508,10 @@
 
 .descripcion-catedra {
   font-size: 1.3rem;
+}
+
+.oscuridad::before {
+  background: rgba(0, 0, 0, 0.3) !important;
 }
 
 h1, h2, h3, h4, h5, a {
@@ -1023,7 +1048,7 @@ p, div {
 }
 @media only screen and (min-width: 1800px) {
   .card-inicio__date {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
   }
 }
 .card-inicio__title {
@@ -1037,11 +1062,11 @@ p, div {
   }
 }
 .card-inicio__title--principal {
-  font-size: 1.45rem;
+  font-size: 1.6rem;
 }
 @media only screen and (min-width: 1800px) {
   .card-inicio__title--principal {
-    font-size: 1.55rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -1958,6 +1983,8 @@ p, div {
 }
 .catedra__title {
   font-size: calc(1.1rem + 1vw);
+  color: black;
+  text-decoration: none;
 }
 @media only screen and (min-width: 992px) {
   .catedra__title {
@@ -1976,7 +2003,7 @@ p, div {
 }
 @media only screen and (min-width: 1800px) {
   .catedra__title--tam {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -2027,6 +2054,10 @@ p, div {
 
 .link-catedra:hover {
   color: #9B070B;
+}
+
+.heredar:nth-child(odd) {
+  background-color: white;
 }
 
 .publicacion-autor {
