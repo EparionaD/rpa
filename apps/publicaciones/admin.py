@@ -16,7 +16,7 @@ class CategoriasAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = CategoriasResource
 
 class PublicacionesAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    prepopulated_fields = {"slug":["title"]}
+    prepopulated_fields = {"publi_slug":["title"]}
     list_display = ('title','categorias','state')
     resource_class = PublicacionesResource
 

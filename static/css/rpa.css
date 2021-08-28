@@ -514,6 +514,11 @@
   background: rgba(0, 0, 0, 0.3) !important;
 }
 
+.estilo-contenido * {
+  font-size: 1rem !important;
+  font-family: "Quicksand", sans-serif !important;
+}
+
 h1, h2, h3, h4, h5, a {
   font-family: "Raleway", sans-serif;
 }

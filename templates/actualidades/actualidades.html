@@ -56,7 +56,7 @@
 
 {% block content %}
     <div class="row">
-        {% for actualidad in actualidades|slice:"1:" %}
+        {% for actualidad in actualidades %}
         <div class="col-12 col-lg-6 col-xxxl-4 mb-3">
             <div class="card">
                 <a class="card-title fw-bold card-inicio__title" href="{% url 'actualidades:detalle' actualidad.slug %}">

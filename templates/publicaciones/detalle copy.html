@@ -4,14 +4,14 @@
 {% block title %}{{ detalle.title }} | RPA{% endblock title %}
 
 {% block meta %}
-    <meta property="og:url"           content="http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.publi_slug %}" />
+    <meta property="og:url"           content="http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.slug %}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ detalle.title }}" />
     <meta property="og:description"   content="{{ detalle.summary|safe }}" />
     <meta property="og:image"         content="{{ detalle.photo.url }}" />
 {% endblock meta %}
 
-{% if request.path == '/publicaciones/'|add:detalle.categorias.slug|add:"/"|add:detalle.publi_slug|add:"/" %}
+{% if request.path == '/publicaciones/'|add:detalle.categorias.slug|add:"/"|add:detalle.slug|add:"/" %}
     {% block publicacionesmenu %}active active--color{% endblock publicacionesmenu %}
     {% block fondo %}
         style="background-image: url('{{ detalle.photo.url }}');"
@@ -22,7 +22,7 @@
 {% block header %}
 <div class="row position-relative portada portada--alto">
     <div class="share mb-4">
-        <a href="{% url 'publicaciones:categorias' detalle.categorias.slug %}" class="btn btn-primary share__button share__button--category">{{ detalle.categorias }}</a>
+        <a href="" class="btn btn-primary share__button share__button--category">{{ detalle.categorias }}</a>
     </div>
     <h1 class="fw-bold lh-sm text-white" href="">{{ detalle.title }}</h1>
     {% if detalle.summary %}
@@ -32,9 +32,9 @@
     {% endif %}
     <div class="share position-relative mt-4">
         <a href="{{ detalle.pdf.url }}" target="_blank" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
-        <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'publicaciones:detalle' detalle.categorias.slug detalle.publi_slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
-        <a class="social__link social__link--size" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.publi_slug %}"><i class="fab fa-twitter-square"></i></a>
-        <a class="social__link social__link--size" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.publi_slug %}"><i class="fab fa-whatsapp"></i></a>
+        <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'publicaciones:detalle' detalle.categorias.slug detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
+        <a class="social__link social__link--size" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
+        <a class="social__link social__link--size" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
         <a class="social__link social__link--size" target="_blank" onclick="getLinkUp()"><i class="fas fa-link"></i></a>
         <div class="alert alert-warning alert-dismissible fade show position-absolute top-100 start-50 translate-middle animate__animated d-none" role="alert" id="alertaup">
             <strong>Enlace copiado!</strong>
@@ -67,9 +67,9 @@
                     <div class="share d-lg-flex flex-lg-column">
                         <a href="{{ detalle.pdf.url }}" target="_blank" class="btn btn-primary share__button share__button--detailpubli"><i class="fas fa-file-download"></i> Descargar</a>
                         <div class="mt-lg-2">
-                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'publicaciones:detalle' detalle.categorias.slug detalle.publi_slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
-                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.publi_slug %}"><i class="fab fa-twitter-square"></i></a>
-                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.publi_slug %}"><i class="fab fa-whatsapp"></i></a>
+                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'publicaciones:detalle' detalle.categorias.slug detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
+                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
+                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.categorias.slug detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
                             <a class="social__link social__link social__link--detailpubli" target="_blank" onclick="getLink({{ detalle.id }})"><i class="fas fa-link"></i></a>
                         </div>
                     </div>

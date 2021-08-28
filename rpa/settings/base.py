@@ -136,6 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
+        # 'contentsCss': os.path.join(BASE_DIR.parent, 'static/css/fonts.css'),
     },
 }
 

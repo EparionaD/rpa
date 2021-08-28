@@ -36,7 +36,7 @@ class Catedra(models.Model):
     modality = models.CharField('Modalidad:', max_length=50, blank=True, null=True)
     schedule = models.CharField('Horario:', max_length=50, blank=True, null=True)
     cost = models.CharField('Costo:', max_length=50, blank=True, null=True)
-    contact_number = models.CharField('Escribemos:', max_length=50, blank=True, null=True)
+    contact_number = models.CharField('Escribenos:', max_length=50, blank=True, null=True)
     syllabus = RichTextUploadingField('Plan de estudios', blank=True, null=True)
     # speaker = RichTextUploadingField('Docentes:', blank=True, null=True)
     profit = RichTextUploadingField('Beneficios:', blank=True, null=True)

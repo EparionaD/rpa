@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-12 col-lg-9 mb-3 mb-lg-0 catedra-detalle">
             <h2 class="fw-bold">Presentación</h2>
-            <div class="mt-3 mb-5">
+            <div class="mt-3 mb-5 estilo-contenido">
                 {{ detalle.description|safe }}
             </div>
             <div class="publicacion-contenido rounded mb-3 heredar">
@@ -91,7 +91,7 @@
                 <div class="d-flex flex-column flex-xl-row px-5 py-5">
                     <a class="btn btn-primary catedra-detalle__button" target="_blank" href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}">Más información e inscripciones</a>
                     <div class="d-flex justify-content-center align-items-center mt-4 mt-xl-0 ms-0 ms-xl-4">
-                        <a class="btn btn-primary" target="_blank" href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}"><i class="fab fa-whatsapp"></i> 999788321</a>
+                        <a class="btn btn-primary" target="_blank" href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}"><i class="fab fa-whatsapp"></i> {{ detalle.contact_number }}</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
             <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Plan de estudios</h2>
-                    <div class="p-3">
+                    <div class="p-3 estilo-contenido">
                         {{ detalle.syllabus|safe }}
                     </div>
                 </div>
@@ -107,12 +107,24 @@
             {% endif %}
             <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
-                    <h2 class="fw-bold">Docentes</h2>
+                    {% if detalle.categorias.slug  == 'cursos' %}
+                        {% if speakers|length >= 2 %}
+                        <h2 class="fw-bold">Docentes</h2>
+                        {% else %}
+                        <h2 class="fw-bold">Docente</h2>
+                        {% endif %}
+                    {% else %}
+                        {% if speakers|length >= 2 %}
+                        <h2 class="fw-bold">Expositores</h2>
+                        {% else %}
+                        <h2 class="fw-bold">Expositor</h2>
+                        {% endif %}
+                    {% endif %}
                     {% for speaker in speakers %}
                     <div class="p-3">
                         <p class="fw-bold">{{ speaker.name }}</p>
                         <div class="d-flex flex-column flex-lg-row">
-                            <div class="catedra-detalle__ponente">
+                            <div class="catedra-detalle__ponente estilo-contenido">
                                 {{ speaker.description|safe }}
                             </div>
                             <div class="mx-auto">
@@ -127,7 +139,7 @@
             <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Beneficios</h2>
-                    <div class="p-3">
+                    <div class="p-3 estilo-contenido">
                         {{ detalle.profit|safe }}
                     </div>
                 </div>
@@ -137,7 +149,7 @@
             <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">El enfoque de aprendizaje de Cátedra</h2>
-                    <div class="p-3">
+                    <div class="p-3 estilo-contenido">
                         {{ detalle.cathedra|safe }}
                     </div>
                 </div>

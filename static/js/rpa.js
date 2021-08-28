@@ -153,7 +153,7 @@ function Links(elemento, elemento1){
 
 window.onload = function(){
     let scroll = document.documentElement.scrollTop || document.body.scrollTop
-    console.log(scroll)
+    // console.log(scroll)
 
     if(scroll > 50){
         boton.removeAttribute('onclick','agregarColor()')
@@ -167,15 +167,25 @@ window.onload = function(){
     if(url){
         catedraDetalle(url)
     }
+
+    const publicacion = window.location.pathname
+    if (publicacion){
+        publicaciones(publicacion)
+    }
+    
+    const paginas = window.location.search
+    if (paginas){
+        pagination()
+
+        // boletin()
+
+        // document.getElementById('eventojuris').addEventListener('click', jurisprudencia())
+        // document.getElementById('eventoboletin').addEventListener('click', boletin())
+    }
 }
 
 function catedraDetalle(url){
-    console.log(url)
-    // window.scrollBy(0,-150)
     window.scrollTo(0,650)
-    // window.setTimeout(function(){
-    //     window.scrollTo(0,650)
-    // },0)
     if(url === '#pills-articulos-tab'){
         document.getElementById('pills-articulos-tab').classList.add('active')
         document.getElementById('pills-boletines-tab').classList.remove('active')
@@ -194,4 +204,74 @@ function catedraDetalle(url){
         document.getElementById('pills-jurisprudencia').classList.remove('active')
     }
 
+}
+
+function publicaciones(url){
+    const numero = url.length
+    if(numero > 15){
+        if(window.innerWidth >= 992 && window.innerWidth <= 1199){
+            window.scrollTo(0,120)
+        }else if(window.innerWidth >= 1200 && window.innerWidth <= 1399){
+            window.scrollTo(0,160)
+        }else if(window.innerWidth >= 1400 && window.innerWidth <= 1799){
+            window.scrollTo(0,160)
+        }else if(window.innerWidth >= 1800){
+            window.scrollTo(0,240)
+        }
+    }
+}
+
+function pagination(){
+    if(window.innerWidth >= 992 && window.innerWidth <= 1199){
+        window.scrollTo(0,580)
+    }else if(window.innerWidth >= 1200 && window.innerWidth <= 1399){
+        window.scrollTo(0,600)
+    }else if(window.innerWidth >= 1400 && window.innerWidth <= 1799){
+        window.scrollTo(0,590)
+    }else if(window.innerWidth >= 1800){
+        window.scrollTo(0,660)
+    }
+}
+
+// window.addEventListener('click', function(){
+//     const prueba = document.querySelectorAll('#eventoboletin li a')
+
+// })
+
+// function boletin(){
+//     const prueba = document.querySelectorAll('#eventoboletin li a')
+//     console.log(prueba)
+//     prueba.forEach(function (procesando){
+//         console.log(procesando)
+//         const tabs = new bootstrap.Tab(procesando)
+//         procesando.addEventListener('click', function(event){
+//             tabs.show()
+//         })
+//     })
+// }
+
+// function boletin(){
+//     const boletines = document.querySelector('#pills-boletines-tab')
+//     // const juris = document.querySelector('#pills-jurisprudencia-tab')
+//     console.log(boletines)
+
+//     const tab = new bootstrap.Tab(boletines)
+
+//     tab.show()
+// }
+
+function boletin(){
+    console.log('se ejecuta0')
+    setTimeout(bol, 1000)
+}
+
+function bol(){
+    console.log('se ejecuta')
+    const boletines = document.querySelector('#pills-boletines-tab')
+    // const juris = document.querySelector('#pills-jurisprudencia-tab')
+    console.log(boletines)
+
+    const tab = new bootstrap.Tab(boletines)
+
+    tab.show()
 }
