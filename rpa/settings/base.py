@@ -133,6 +133,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #CkEditor
 
+# CKEDITOR_SETTINGS = {
+#     'font_names':'Quicksand',
+# }
+
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
