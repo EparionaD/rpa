@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from apps.actualidades.models import Actualidades
 from apps.publicaciones.models import Publicaciones, Categorias
+from .models import Firma
 
 class InicioView(TemplateView):
     template_name = 'inicio/index.html'
@@ -18,6 +19,12 @@ class InicioView(TemplateView):
 
 class FirmaView(TemplateView):
     template_name = 'inicio/firma.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['firmas'] = Firma.objects.all()
+
+        return context
 
 class EspecialidadesView(TemplateView):
     template_name = 'inicio/especialidades.html'

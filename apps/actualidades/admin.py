@@ -10,6 +10,7 @@ class ActualidadesResource(resources.ModelResource):
 
 class ActualidadesAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     prepopulated_fields = {"slug":["title"]}
+    search_fields = ('title',)
     list_display = ('title','state')
     resource_class = ActualidadesResource
 

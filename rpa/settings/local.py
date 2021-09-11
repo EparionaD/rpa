@@ -1,3 +1,4 @@
+import os
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -18,4 +19,4 @@ DATABASES = {
 if DEBUG:
     STATICFILES_DIRS = [BASE_DIR, 'static']
 else:
-    STATIC_ROOT = BASE_DIR, 'static'
+    STATIC_ROOT = os.path.join(BASE_DIR.parent, 'static')

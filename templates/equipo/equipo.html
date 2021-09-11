@@ -39,10 +39,10 @@
 {% block social-movil %}
      <div class="col-12 col-lg-2 social social--movil d-inline-block d-lg-none">
         <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/pariona.abogados"><i class="fab fa-facebook-square"></i></a>
-        <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-twitter-square"></i></a>
+        <a class="social__link social__link--size" target="_blank" href="https://twitter.com/ParionaAbogados"><i class="fab fa-twitter-square"></i></a>
         <a class="social__link social__link--size" target="_blank" href="https://m.me/pariona.abogados"><i class="fab fa-facebook-messenger"></i></a>
-        <a class="social__link social__link--size" target="_blank" href="https://api.whatsapp.com/send?phone=51987407711"><i class="fab fa-whatsapp"></i></a>
-        <a class="social__link social__link--size" target="_blank" href=""><i class="fab fa-linkedin"></i></a>
+        <a class="social__link social__link--size" target="_blank" href="https://api.whatsapp.com/send?phone=51915154298"><i class="fab fa-whatsapp"></i></a>
+        <a class="social__link social__link--size" target="_blank" href="https://www.linkedin.com/company/estudio-pariona-abogados/"><i class="fab fa-linkedin"></i></a>
     </div>
 {% endblock social-movil %}
 
@@ -55,8 +55,10 @@
                 <img class="img-fluid rounded" src="{{ equipo.photo.url }}" alt="{{ equipo.name }}">
                 <div class="position-absolute bottom-0 start-50 translate-middle-x card-equipo__body">
                     <div class="position-relative card-equipo__container">
-                        <div class="d-flex flex-column h-100 card-equipo__description">
+                        <div class="d-flex flex-column h-100 card-equipo__description justify-content-end">
+                            {% if equipo.grade %}
                             <span class="mt-auto fw-bold card-equipo__data">{{ equipo.grade }}</span>
+                            {% endif %}
                             <h1 class="fw-bold card-equipo__name">{{ equipo.name }}</h1>
                             <a class="card-equipo__data card-equipo__data--email" href="mailto:{{ equipo.email }}">{{ equipo.email }}</a>
                         </div>

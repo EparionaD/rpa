@@ -153,7 +153,6 @@ function Links(elemento, elemento1){
 
 window.onload = function(){
     let scroll = document.documentElement.scrollTop || document.body.scrollTop
-    // console.log(scroll)
 
     if(scroll > 50){
         boton.removeAttribute('onclick','agregarColor()')
@@ -176,11 +175,6 @@ window.onload = function(){
     const paginas = window.location.search
     if (paginas){
         pagination()
-
-        // boletin()
-
-        // document.getElementById('eventojuris').addEventListener('click', jurisprudencia())
-        // document.getElementById('eventoboletin').addEventListener('click', boletin())
     }
 }
 
@@ -232,46 +226,3 @@ function pagination(){
         window.scrollTo(0,660)
     }
 }
-
-// window.addEventListener('click', function(){
-//     const prueba = document.querySelectorAll('#eventoboletin li a')
-
-// })
-
-// function boletin(){
-//     const prueba = document.querySelectorAll('#eventoboletin li a')
-//     console.log(prueba)
-//     prueba.forEach(function (procesando){
-//         console.log(procesando)
-//         const tabs = new bootstrap.Tab(procesando)
-//         procesando.addEventListener('click', function(event){
-//             tabs.show()
-//         })
-//     })
-// }
-
-// function boletin(){
-//     const boletines = document.querySelector('#pills-boletines-tab')
-//     // const juris = document.querySelector('#pills-jurisprudencia-tab')
-//     console.log(boletines)
-
-//     const tab = new bootstrap.Tab(boletines)
-
-//     tab.show()
-// }
-
-// function boletin(){
-//     console.log('se ejecuta0')
-//     setTimeout(bol, 1000)
-// }
-
-// function bol(){
-//     console.log('se ejecuta')
-//     const boletines = document.querySelector('#pills-boletines-tab')
-//     // const juris = document.querySelector('#pills-jurisprudencia-tab')
-//     console.log(boletines)
-
-//     const tab = new bootstrap.Tab(boletines)
-
-//     tab.show()
-// }

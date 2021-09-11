@@ -4,7 +4,7 @@
 {% block title %}{{ detalle.title }} | RPA{% endblock title %}
 
 {% block meta %}
-    <meta property="og:url"           content="http://www.rpa.pe{% url 'actualidades:detalle' detalle.slug %}" />
+    <meta property="og:url"           content="http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ detalle.title }}" />
     <meta property="og:description"   content="{{ detalle.summary|safe }}" />
@@ -29,10 +29,10 @@
             {% if detalle.pdf %}
                 <a href="{{ detalle.pdf.url }}" target="_blank" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
             {% endif %}
-            <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'actualidades:detalle' detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
-            <a class="social__link social__link--size" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'actualidades:detalle' detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
-            <a class="social__link social__link--size" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'actualidades:detalle' detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
-            <a class="social__link social__link--size" target="_blank" onclick="Links('{{ detalle.id }}','{{ detalle.slug }}')" campo="http://www.rpa.pe{% url 'actualidades:detalle' detalle.slug %}" id="{{ detalle.id }}"><i class="fas fa-link"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
+            <a class="social__link social__link--size" target="_blank" onclick="Links('{{ detalle.id }}','{{ detalle.slug }}')" campo="http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}" id="{{ detalle.id }}"><i class="fas fa-link"></i></a>
             <div class="alert alert-warning alert-dismissible fade show position-absolute top-100 start-50 translate-middle animate__animated d-none" role="alert" id="{{ detalle.slug }}">
                 <strong>Enlace copiado!</strong>
             </div>
@@ -44,8 +44,7 @@
     <div class="row">
         <div class="col-12 col-lg-9 mb-3 mb-lg-0">
             <div class=" publicacion-contenido rounded">
-                <h1 class="fw-bold p-4">{{ detalle.title }}</h1>
-                <div class="p-4 estilo-contenido">
+                <div class="p-4">
                     {{ detalle.description|safe }}
                 </div>
             </div>
@@ -66,9 +65,9 @@
                 <div class="rounded-bottom publicacion-autor__share">
                     <div class="share d-lg-flex flex-lg-column">
                         <div class="mt-lg-2">
-                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'publicaciones:detalle' detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
-                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
-                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
+                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
+                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
+                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'actualidades:detalle-actualidad' detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
                             <a class="social__link social__link social__link--detailpubli" target="_blank" onclick="getLink({{ detalle.id }})"><i class="fas fa-link"></i></a>
                         </div>
                     </div>

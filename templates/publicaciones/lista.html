@@ -48,7 +48,7 @@
         {% endif %}
         <div class="share mt-4">
             <a href="{{ publicacion.pdf.url }}" target="_blank" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
-            <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'publicaciones:detalle' publicacion.categorias.slug publicacion.publi_slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
+            <a class="social__link social__link--size" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.rpa.pe{% url 'publicaciones:detalle' publicacion.categorias.slug publicacion.publi_slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
             <a class="social__link social__link--size" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ publicacion.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' publicacion.categorias.slug publicacion.publi_slug %}"><i class="fab fa-twitter-square"></i></a>
             <a class="social__link social__link--size" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' publicacion.categorias.slug publicacion.publi_slug %}"><i class="fab fa-whatsapp"></i></a>
             <a class="social__link social__link--size" target="_blank" onclick="Links('{{ publicacion.id }}','{{ publicacion.categorias }}')" campo="http://www.rpa.pe{% url 'publicaciones:detalle' publicacion.categorias.slug publicacion.publi_slug %}" id="{{ publicacion.id }}"><i class="fas fa-link"></i></a>
@@ -85,7 +85,7 @@
                             <div class="share d-flex flex-column flex-xl-row justify-content-xl-between mt-3 mt-xl-0">
                                 <a href="{{ juris.pdf.url }}" class="btn btn-primary share__button me-3"><i class="fas fa-file-download"></i> Descargar</a>
                                 <div class="mt-3 mt-xl-0">
-                                    <a class="share__link" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'publicaciones:detalle' juris.categorias.slug juris.publi_slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
+                                    <a class="share__link" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.rpa.pe{% url 'publicaciones:detalle' juris.categorias.slug juris.publi_slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square share__icon share__icon--facebook"></i></a>
                                     <a class="share__link" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ juris.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'publicaciones:detalle' juris.categorias.slug juris.publi_slug %}"><i class="fab fa-twitter-square share__icon share__icon--twitter"></i></a>
                                     <a class="share__link" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'publicaciones:detalle' juris.categorias.slug juris.publi_slug %}"><i class="fab fa-whatsapp share__icon share__icon--whatsapp"></i></a>
                                     <a class="share__link" onclick="Links('{{ juris.id }}','{{ juris.publi_slug }}')" campo="http://www.rpa.pe{% url 'publicaciones:detalle' juris.categorias.slug juris.publi_slug %}" id="{{ juris.id }}"><i class="fas fa-link share__icon share__icon--link"></i></a>

@@ -21,7 +21,9 @@ class CategoriasAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 class CatedraAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     prepopulated_fields = {"slug":["title"]}
+    search_fields = ('title',)
     list_display = ('title','categorias','state')
+    list_filter = ('categorias',)
     inlines = [SpeakerAdmin]
     resource_class = CatedraResource
 

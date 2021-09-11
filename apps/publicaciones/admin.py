@@ -17,7 +17,9 @@ class CategoriasAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 class PublicacionesAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     prepopulated_fields = {"publi_slug":["title"]}
+    search_fields = ('title',)
     list_display = ('title','categorias','state')
+    list_filter = ('categorias',)
     resource_class = PublicacionesResource
 
 admin.site.register(Categorias, CategoriasAdmin)

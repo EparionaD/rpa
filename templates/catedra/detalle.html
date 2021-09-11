@@ -7,7 +7,7 @@
     <meta property="og:url"           content="http://www.rpa.pe{% url 'catedra:detalle' detalle.slug %}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ detalle.title }}" />
-    <meta property="og:description"   content="{{ detalle.description|safe }}" />
+    <meta property="og:description"   content="{{ detalle.description }}" />
     <meta property="og:image"         content="{{ detalle.photo.url }}" />
 {% endblock meta %}
 
@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-12 col-lg-9 mb-3 mb-lg-0 catedra-detalle">
             <h2 class="fw-bold">Presentación</h2>
-            <div class="mt-3 mb-5 estilo-contenido">
+            <div class="mt-3 mb-5">
                 {{ detalle.description|safe }}
             </div>
             <div class="publicacion-contenido rounded mb-3 heredar">
@@ -99,7 +99,7 @@
             <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Plan de estudios</h2>
-                    <div class="p-3 estilo-contenido">
+                    <div class="p-3">
                         {{ detalle.syllabus|safe }}
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                     <div class="p-3">
                         <p class="fw-bold">{{ speaker.name }}</p>
                         <div class="d-flex flex-column flex-lg-row">
-                            <div class="catedra-detalle__ponente estilo-contenido">
+                            <div class="catedra-detalle__ponente pe-2">
                                 {{ speaker.description|safe }}
                             </div>
                             <div class="mx-auto">
@@ -139,7 +139,7 @@
             <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra mb-3 heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">Beneficios</h2>
-                    <div class="p-3 estilo-contenido">
+                    <div class="p-3">
                         {{ detalle.profit|safe }}
                     </div>
                 </div>
@@ -149,7 +149,7 @@
             <div class="publicacion-contenido publicacion-contenido--catedra rounded border-catedra heredar">
                 <div class="d-flex flex-column px-5 py-5">
                     <h2 class="fw-bold">El enfoque de aprendizaje de Cátedra</h2>
-                    <div class="p-3 estilo-contenido">
+                    <div class="p-3">
                         {{ detalle.cathedra|safe }}
                     </div>
                 </div>
@@ -178,9 +178,9 @@
                     <a class="btn btn-primary catedra-detalle__button" target="_blank"href="https://api.whatsapp.com/send?phone={{ detalle.contact_number }}">Inscripciones</a>
                 </div>
                 <div class="rounded-bottom publicacion-autor__share">
-                    <div class="share d-lg-flex flex-lg-column">
+                    <div class="share d-lg-flex flex-lg-column justify-content-center">
                         <div class="mt-lg-2">
-                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://167.99.119.117{% url 'catedra:detalle' detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
+                            <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.rpa.pe{% url 'catedra:detalle' detalle.slug %}&amp;src=sdkpreparse"><i class="fab fa-facebook-square"></i></a>
                             <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=%22{{ detalle.title }}%22&tw_p=tweetbutton&url=http://www.rpa.pe{% url 'catedra:detalle' detalle.slug %}"><i class="fab fa-twitter-square"></i></a>
                             <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="fb-messenger://share/?link=http%3A%2F%www.rpa.pe%2F{% url 'catedra:detalle' detalle.slug %}&app_id=461521414055119"><i class="fab fa-facebook-messenger"></i></a>
                             <a class="me-2 social__link social__link social__link--detailpubli" target="_blank" href="whatsapp://send?text=http://www.rpa.pe{% url 'catedra:detalle' detalle.slug %}"><i class="fab fa-whatsapp"></i></a>
