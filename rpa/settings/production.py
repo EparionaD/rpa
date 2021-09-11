@@ -4,7 +4,7 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['167.99.119.117','localhost']
+ALLOWED_HOSTS = ['www.rpa.pe','rpa.pe','143.244.179.7','localhost']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -12,9 +12,9 @@ ALLOWED_HOSTS = ['167.99.119.117','localhost']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rpadb',
+        'NAME': 'rpaDB',
         'USER': 'rpa',
-        'PASSWORD': 'ernesto123',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
